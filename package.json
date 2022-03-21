@@ -9,11 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "mongodb": "^4.4.1",
     "next": "12.1.0",
+    "next-auth": "^4.3.1",
+    "nodemailer": "^6.7.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^2.0.6",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0"
   }
