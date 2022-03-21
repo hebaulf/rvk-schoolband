@@ -1,9 +1,10 @@
 import React from "react";
+import styles from "./Footer.module.css"
 
 const Footer = () => {
   return (
     <footer>
-      <div className="FooterInfo">
+      <div className={styles.footer_info}>
         <div className="FooterInfo__group" role="contactinfo">
           <h3 className="FooterInfo__grouptitle">Opnunartímar</h3>
           <div className="FooterInfo__groupcontent">
@@ -21,11 +22,11 @@ const Footer = () => {
           <h3 className="FooterInfo__grouptitle">Hafa samband</h3>
           <div className="FooterInfo__groupcontent">
             <ul>
-              <li><a href="/">Ábendingar</a><span>Sendu okkur línu</span></li>
-              <li><a href="/">Netspjall</a><span>Opið virka daga kl. 8:30-16:00</span></li>
-              <li><a href="/">Spurt og svarað</a><span>Algengar spurningar og svör</span></li>
-              <li><a href="tel:+3544111111">Þjónustuver 411 1111</a><span>Opið virka daga kl. 8:30-16:00</span></li>
-              <li><a href="mailto:upplysingar@reykjavik.is">upplysingar@reykjavik.is</a><span>Sendu okkur línu</span></li>
+              <li><a href="/">Ábendingar</a><span><br />Sendu okkur línu</span></li>
+              <li><a href="/">Netspjall</a><span><br />Opið virka daga kl. 8:30-16:00</span></li>
+              <li><a href="/">Spurt og svarað</a><span><br />Algengar spurningar og svör</span></li>
+              <li><a href="tel:+3544111111">Þjónustuver 411 1111</a><span><br />Opið virka daga kl. 8:30-16:00</span></li>
+              <li><a href="mailto:upplysingar@reykjavik.is">upplysingar@reykjavik.is</a><span><br />Sendu okkur línu</span></li>
             </ul>
           </div>
         </div>
