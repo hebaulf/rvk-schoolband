@@ -3,13 +3,8 @@ import styles from "./Footer.module.css"
 
 const Footer = () => {
   return (
-<<<<<<< HEAD
-    <footer>
-      <div className={styles.footer_info}>
-=======
     <footer className="Layout__footer" role="complementary">
       <div className="FooterInfo">
->>>>>>> 402c62d (Add _documents.js file and update layout. Add form and form component files.)
         <div className="FooterInfo__group" role="contactinfo">
           <h3 className="FooterInfo__grouptitle">Opnunartímar</h3>
           <div className="FooterInfo__groupcontent">
@@ -35,19 +30,11 @@ const Footer = () => {
           <h3 className="FooterInfo__grouptitle">Hafa samband</h3>
           <div className="FooterInfo__groupcontent">
             <ul>
-<<<<<<< HEAD
               <li><a href="/">Ábendingar</a><span><br />Sendu okkur línu</span></li>
               <li><a href="/">Netspjall</a><span><br />Opið virka daga kl. 8:30-16:00</span></li>
               <li><a href="/">Spurt og svarað</a><span><br />Algengar spurningar og svör</span></li>
               <li><a href="tel:+3544111111">Þjónustuver 411 1111</a><span><br />Opið virka daga kl. 8:30-16:00</span></li>
               <li><a href="mailto:upplysingar@reykjavik.is">upplysingar@reykjavik.is</a><span><br />Sendu okkur línu</span></li>
-=======
-              <li><a href="https://abendingar.reykjavik.is/" target="_blank">Ábendingar <small>Sendu okkur línu</small></a></li>
-              <li><a href="https://svarbox.teljari.is/?c=1030" target="_blank">Netspjall <small>Opið virka daga kl. 8:30–16:00</small></a></li>
-              <li><a href="/spurt-og-svarad">Spurt og svarað <small>Algengar spurningar og svör</small></a></li>
-              <li><a href="tel:+3544111111">Þjónustuver 411-1111<small>Opið virka daga kl. 8:30–16:00</small></a></li>
-              <li><a href="mailto:upplysingar@reykjavik.is">upplysingar@reykjavik.is <small>Sendu okkur línu</small></a></li>
->>>>>>> 402c62d (Add _documents.js file and update layout. Add form and form component files.)
             </ul>
           </div>
         </div>
