@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import Head from "next/head";
 // import styles from "../styles/Home.module.css";
+=======
+import Head from "next/head"
+>>>>>>> 402c62d (Add _documents.js file and update layout. Add form and form component files.)
 import { useSession, signIn, signOut } from "next-auth/react"
 
 
@@ -13,6 +17,7 @@ export default function Home() {
   }
 
   return (
+<<<<<<< HEAD
     <>
       <Head>
         <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
@@ -32,5 +37,13 @@ export default function Home() {
       </Head>
 
     </>
+=======
+    <div className="container">
+      <Head>
+        <title>Home Page</title>
+      </Head>
+
+    </div>
+>>>>>>> 402c62d (Add _documents.js file and update layout. Add form and form component files.)
   );
 }

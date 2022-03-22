@@ -65,7 +65,6 @@ const PersonalInfo = () => {
           </div>
         </div>
       </div>
-      <div></div>
     </div>
   );
 };
