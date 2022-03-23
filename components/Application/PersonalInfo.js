@@ -17,7 +17,7 @@ const PersonalInfo = () => {
               type="checkbox"
               id="_6746485-125"
               name="fruits"
-              value="Jón"
+              dafaultValue="Jón"
             />
             <label className="CheckboxButton__label" for="_6746485-125">
               Rögnvaldur Björn Magnússon <small>030412-5479</small>
@@ -29,7 +29,7 @@ const PersonalInfo = () => {
               type="checkbox"
               id="_6746485-126"
               name="fruits"
-              value="Anna"
+              dafaultValue="Anna"
               checked=""
             />
             <label className="CheckboxButton__label" for="_6746485-126">
@@ -42,11 +42,11 @@ const PersonalInfo = () => {
         </div>
       </div>
 
-      <fieldset class="FieldGroup" role="group">
+      <fieldset className="FieldGroup" role="group">
       <h4 className="FormField__label">Börn</h4>
-        <div class="FormField TextInput">
-          <label class="FormField__label" for="_6746485-193"> Pick your fruits</label>
-          <input class="FormField__input" type="text" id="_6746485-193" value="" />
+        <div className="FormField TextInput">
+          <label className="FormField__label" for="_6746485-193"> Pick your fruits</label>
+          <input className="FormField__input" type="text" id="_6746485-193" value="" />
         </div>
       </fieldset>
       <br className="VSpacer VSpacer--small" />

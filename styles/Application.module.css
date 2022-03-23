@@ -1,0 +1,8 @@
+.Application__wrapper {
+    display: flex;
+}
+
+.Application__stepper {
+    width: 170px;
+    margin-right: 4rem;
+}

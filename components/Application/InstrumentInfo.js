@@ -1,7 +1,7 @@
 
 const InstrumentInfo = () => {
   return (
-    <div>InstrumentInfo</div>
+    <div>Val á hljóðfæri</div>
   )
 }
 

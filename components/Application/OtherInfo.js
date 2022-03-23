@@ -1,7 +1,7 @@
 
 const OtherInfo = () => {
   return (
-    <div>OtherInfo</div>
+    <div>Upplýsingar</div>
   )
 }
 
