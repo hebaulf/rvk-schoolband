@@ -14,14 +14,11 @@ const Navigation = () => {
           <li className="MainMenu__item MainMenu__item--home">
             <a className="MainMenu__link" href="">Forsíða</a>
           </li>
-          <li className="MainMenu__item"><button className="MainMenu__link" aria-controls="MegaMenu:Íbúar">Íbúar</button></li>
-          <li className="MainMenu__item"><button className="MainMenu__link" aria-controls="MegaMenu:Stjórnkerfið">Stjórnkerfið</button></li>
-          <li className="MainMenu__item"><button className="MainMenu__link" aria-controls="MegaMenu:Mannlíf">Mannlíf</button></li>
+          <li className="MainMenu__item"><button className="MainMenu__link">Þjónusta</button></li>
+          <li className="MainMenu__item"><button className="MainMenu__link">Um mig</button></li>
+          <li className="MainMenu__item"><button className="MainMenu__link">Mín mál</button></li>
           <li className="MainMenu__separator" aria-hidden="true"></li>
-          <li className="MainMenu__item MainMenu__item--lang"><a className="MainMenu__link" href="/"aria-label="English" title="English" lang="en">EN</a></li>
-          <li className="MainMenu__item MainMenu__item--lang"><a className="MainMenu__link" href="/" aria-label="Polski" title="Polski" lang="pl">PL</a></li>
-          <li className="MainMenu__item MainMenu__item--mypages"><a className="MainMenu__link" href="/">Mínar síður</a></li>
-          <li className="MainMenu__item MainMenu__item--search"><a className="MainMenu__link" href="/" aria-label="Leita á vefnum" title="Leita á vefnum">Leita</a></li>
+          <li className="MainMenu__item"><a className="MainMenu__link" href="#">Útskráning</a></li>
         </ul>
       </nav>
     </div>
