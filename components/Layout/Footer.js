@@ -29,9 +29,9 @@ const Footer = () => {
           <h3 className="FooterInfo__grouptitle">Hafa samband</h3>
           <div className="FooterInfo__groupcontent">
             <ul>
-              <li><a href="/">Ábendingar</a><span><br />Sendu okkur línu</span></li>
-              <li><a href="/">Netspjall</a><span><br />Opið virka daga kl. 8:30-16:00</span></li>
-              <li><a href="/">Spurt og svarað</a><span><br />Algengar spurningar og svör</span></li>
+              <li><a href="#">Ábendingar</a><span><br />Sendu okkur línu</span></li>
+              <li><a href="#">Netspjall</a><span><br />Opið virka daga kl. 8:30-16:00</span></li>
+              <li><a href="#">Spurt og svarað</a><span><br />Algengar spurningar og svör</span></li>
               <li><a href="tel:+3544111111">Þjónustuver 411 1111</a><span><br />Opið virka daga kl. 8:30-16:00</span></li>
               <li><a href="mailto:upplysingar@reykjavik.is">upplysingar@reykjavik.is</a><span><br />Sendu okkur línu</span></li>
             </ul>
@@ -41,14 +41,14 @@ const Footer = () => {
           <h3 className="FooterInfo__grouptitle">Alls konar</h3>
           <div className="FooterInfo__groupcontent">
             <ul>
-              <li><a href="https://minarsidur.reykjavik.is/">Mínar síður</a></li>
-              <li><a href="https://reykjavik.is/laus-storf/oll-storf">Laus störf</a></li>
-              <li><a href="https://abendingar.reykjavik.is/">Ábendingar</a></li>
-              <li><a href="/thjonustuver">Þjónustuver</a></li>
-              <li><a href="/frettir">Fréttir</a></li>
-              <li><a href="/gjaldskrar">Gjaldskrár</a></li>
-              <li><a href="http://teikningar.reykjavik.is/">Teikningavefur</a></li>
-              <li><a href="/sites/default/files/ymis_skjol/skjol_utgefid_efni/personuverndarstefna_reykjavikurborgar_mars_2019.pdf">Persónuverndarstefna</a>
+              <li><a href="#">Mínar síður</a></li>
+              <li><a href="#">Laus störf</a></li>
+              <li><a href="#">Ábendingar</a></li>
+              <li><a href="#">Þjónustuver</a></li>
+              <li><a href="#">Fréttir</a></li>
+              <li><a href="#">Gjaldskrár</a></li>
+              <li><a href="#">Teikningavefur</a></li>
+              <li><a href="#">Persónuverndarstefna</a>
               </li>
             </ul>
           </div>
