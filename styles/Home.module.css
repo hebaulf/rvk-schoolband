@@ -1,3 +1,26 @@
-.BasicTable {
+.AboutButton {
+    margin-top: 80px;
+}
+
+.MyCaseWrapper {
+    margin-bottom: 4rem;
+}
+
+.TableTitle {
+    display: flex;
+    -webkit-box-align: baseline;
+    align-items: baseline;
+}
+
+.TitleWrapper {
+    margin-right: 136px;
+}
+
+.tableWrap {
+    margin-bottom: 6rem;
+}
+
+.table {
     width: 100%;
 }
+

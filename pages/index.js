@@ -1,5 +1,5 @@
 import Head from "next/head";
-// import styles from "../styles/Home.module.css
+import style from "../styles/Home.module.css"
 import { useSession, signIn, signOut } from "next-auth/react"
 
 
@@ -35,7 +35,7 @@ export default function Home() {
           <a className="ButtonTertiary" href="/login">Innskrá með notendanafni</a>
         </div>
       </div> */}
-      <div className="Herostyles__HeroBlockWrapper">
+    <div className="Herostyles__HeroBlockWrapper">
       <div className="HeroBlock">
         <h1 className="HeroBlock__title">Hæ, Ragnheiður</h1>
         <picture className="HeroBlock__image">
@@ -47,23 +47,25 @@ export default function Home() {
         </picture>
         <div className="HeroBlock__summary">
           Hér finnur þú allar umsóknir borgarinnar. Sumar eru rafrænar, en aðrar á eyðublöðum. Eyðublöð má fylla út og senda með tölvupósti eða prenta út og skila á pappír.        </div>
-        <div className="HeroBlock__buttons">
+        <div className={`HeroBlock__buttons ${style.AboutButton}`}>
           <a className="ButtonTertiary" href="#">Um mig</a>
         </div>
         </div>
-        <div className="MyCasesViewstyles__MyCaseWrapper">
-        <div className="MyCasesViewstyles__TableTitleContainer">
-        <div className="MyCasesViewstyles__TitleWrapper">
-            <h2 className="Heading">Mín mál</h2>
-          </div>
-            <a className="ButtonTertiary" href="#">Sjá öll mál</a>
-          </div>
-          <div className="Attention">Þegar þú hefur sent inn umsókn þá mun birtast listi yfir þær hér.</div>
-        </div>
-      </div>
 
-      <div className="TableWrapper TableWrapper--BasicTable">
-        <table className="BasicTable">
+      <div className={`MyCasesViewstyles__MyCaseWrapper ${style.MyCaseWrapper}`}>
+        <div className={`MyCasesViewstyles__TableTitleContainer ${style.TableTitle}`}>
+        <div className={`MyCasesViewstyles__TitleWrapper ${style.TitleWrapper}`}>
+          <h2 className="Heading">Mín mál</h2>
+        </div>
+          <a className="ButtonTertiary" href="#">Sjá öll mál</a>
+        </div>
+          
+        {/* <div className="Attention">Þegar þú hefur sent inn umsókn þá mun birtast listi yfir þær hér.</div> */}
+      </div>
+    </div>
+
+      <div className={`TableWrapper TableWrapper--BasicTable ${style.tableWrap}`}>
+        <table className={`BasicTable ${style.table}`}>
           <thead>
             <tr>
               <th className="Cell--number" scope="row">Nr. umsóknar</th>
@@ -95,7 +97,7 @@ export default function Home() {
           <ul className="ExtraLinks__list">
             <li className="ExtraLinks__item">
               <a className="ExtraLinks__card" href="#">
-                <span className="ExtraLinks__card__title">Börn, unglingar og ungt fólk</span>
+                <span className="ExtraLinks__card__title">Börn, unglingar og <br/> ungt fólk</span>
               </a>
             </li>
             <li className="ExtraLinks__item">
