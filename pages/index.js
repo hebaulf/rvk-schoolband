@@ -96,8 +96,8 @@ export default function Home() {
           <h2 className="ExtraLinks__title">Þjónusta í boði hjá Reykjavíkurborg</h2>
           <ul className="ExtraLinks__list">
             <li className="ExtraLinks__item">
-              <a className="ExtraLinks__card" href="#">
-                <span className="ExtraLinks__card__title">Börn, unglingar og <br/> ungt fólk</span>
+              <a className="ExtraLinks__card" href="/children">
+                <span className="ExtraLinks__card__title">Börn, unglingar og ungt fólk</span>
               </a>
             </li>
             <li className="ExtraLinks__item">

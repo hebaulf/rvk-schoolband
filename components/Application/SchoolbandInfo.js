@@ -1,5 +1,8 @@
+import { useContext } from "react";
+import { StepperContext } from "../../contexts/StepperContext";
+
 import TitleBlock from "../TitleBlock/TitleBlock"
-import styles from "./SchoolbandInfo.module.css"
+import styles from "./Application.module.css"
 
 const SchoolbandInfo = () => {
   return (

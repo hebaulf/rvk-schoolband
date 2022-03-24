@@ -1,110 +1,138 @@
-import TitleBlock from "../TitleBlock/TitleBlock";
+import { useContext } from "react";
+import style from "./Application.module.css";
+import { StepperContext } from "../../contexts/StepperContext";
 
 const PersonalInfo = () => {
+  const { userData, setUserData } = useContext(StepperContext);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserData({ ...userData, [name]: value })
+  }
+
   return (
-    <div>
+    <div ClassName={style.personalInfoApplication}>
       <div className="TextBlock">
         <h2>Börn og foreldrar</h2>
         <p>Upplýsingar um foreldra/forsjáraðila koma frá Þjóðskrá og skólakerfum Reykjavíkurborgar. Athugaðu hvort símanúmer og netföng séu rétt áður en þú heldur áfram.</p>
       </div>
 
-      <div className="FormField CheckboxButtonsGroup" role="group">
-        <h4 className="FormField__label" id="label:_6746485-124">Börn</h4>
-        <ul className="FormField__options" role="group" aria-labelledby="label:_6746485-124" aria-required="false" >
-          <li className="CheckboxButton FormField__options__item">
-            <input 
-              className="CheckboxButton__input" 
-              type="checkbox"
-              id="_6746485-125"
-              name="fruits"
-              dafaultValue="Jón"
+      <div class="FormField RadioButtonsGroup" role="group">
+        <h3 class="FormField__label">Börn</h3>
+        <ul
+          class="FormField__options"
+          role="group"
+          aria-labelledby="label:_7600434-20"
+          aria-required="false"
+        >
+          <li class="RadioButton FormField__options__item">
+            <input
+              class="RadioButton__input"
+              type="radio"
+              id="_7600434-21"
+              name="fruit"
+              value="Rögnvaldur Björn Magnússon 030412-5476"
             />
-            <label className="CheckboxButton__label" for="_6746485-125">
-              Rögnvaldur Björn Magnússon <small>030412-5479</small>
+            <label class="RadioButton__label" for="_7600434-21">
+              Rögnvaldur Björn Magnússon <small>030412-5476</small>
             </label>
           </li>
-          <li className="CheckboxButton FormField__options__item">
+          <li class="RadioButton FormField__options__item">
             <input
-              className="CheckboxButton__input"
-              type="checkbox"
-              id="_6746485-126"
-              name="fruits"
-              dafaultValue="Anna"
-              checked=""
+              class="RadioButton__input"
+              type="radio"
+              id="_7600434-22"
+              name="fruit"
+              value="Sigurður Már Magnússon 130816-5476"
             />
-            <label className="CheckboxButton__label" for="_6746485-126">
-              Anna Ólöf Magnúsdóttir<small>130818-3237</small>
+            <label class="RadioButton__label" for="_7600434-22">
+              Sigurður Már Magnússon <small>130816-5476</small>
             </label>
           </li>
         </ul>
-        <div className="Alert Alert--info Alert--closable" role="alert" hidden="">
-          Aðeins er hægt að sækja um í skólahljómsveit fyrir börn fædd fyrir 2014.
-        </div>
+      </div>
+      <div className="Alert Alert--info Alert--closable" role="alert" hidden="">
+        Aðeins er hægt að sækja um í skólahljómsveit fyrir börn fædd fyrir 2014.
       </div>
 
-      <fieldset className="FieldGroup" role="group">
-      <h4 className="FormField__label">Börn</h4>
-        <div className="FormField TextInput">
-          <label className="FormField__label" for="_6746485-193"> Pick your fruits</label>
-          <input className="FormField__input" type="text" id="_6746485-193" value="" />
-        </div>
-      </fieldset>
-      <br className="VSpacer VSpacer--small" />
+      <div className={style.infoBox}>
+        <h3 class="FormField__label">Foreldrar / Forsjáraðilar</h3>
+        <fieldset className="form__infobox">
+          <div class="FormField FormField--readonly">
+            <label class="FormField__label" for="name">Nafn</label>
+            <span class="FormField__input" id="name" readonly="">Ragnheiður Margrét Jónsdóttir</span>
+          </div>
+          <div class="FormField FormField--readonly">
+            <label class="FormField__label" for="kt">Kennitala</label>
+            <span class="FormField__input" id="kt" readonly="">030484-4556</span>
+          </div>
+          <div class="FormField FormField--readonly">
+            <label class="FormField__label" for="address">Heimilisfang</label>
+            <span class="FormField__input" id="address" readonly="">Leynimel 48</span>
+          </div>
+          <div class="FormField FormField--readonly">
+            <label class="FormField__label" for="postal">Póstnúmer</label>
+            <span class="FormField__input" id="postal" readonly="">107</span>
+          </div>
+					<div class="FormField TextInput">
+            <label class="FormField__label" for="phone">Sími</label>
+            <input 
+              class="FormField__input" 
+              type="number" 
+              id="phone" 
+              value="6984050"
+              onChange={() => {}}
+            />
+          </div>
+          <div class="FormField TextInput">
+            <label class="FormField__label" for="email">Netfang</label>
+            <input 
+              class="FormField__input" 
+              type="email" 
+              id="email" 
+              value="ragnheidur@snjoark.is"
+              onChange={() => {}}
+            />
+          </div>
+        </fieldset>
 
-      <div className="form__section">
-        <h4>Foreldrar/forsjáraðilar</h4>
-        <div className="form__infobox">
-          <div className="form__infobox__item">
-            <span>Nafn</span>
-            <p>Ragnheiður Margrét Jónsdóttir</p>
+        <fieldset className="form__infobox">
+          <div class="FormField FormField--readonly">
+            <label class="FormField__label" for="name">Nafn</label>
+            <span class="FormField__input" id="name" readonly="">Magnús Björnsson</span>
           </div>
-					<div className="form__infobox__item">
-            <span>Kennitala</span>
-            <p>030484-4556</p>
+          <div class="FormField FormField--readonly">
+            <label class="FormField__label" for="kt">Kennitala</label>
+            <span class="FormField__input" id="kt" readonly="">010184-6789</span>
           </div>
-					<div className="form__infobox__item">
-            <span>Heimilisfang</span>
-            <p>Leynimel 48</p>
+          <div class="FormField FormField--readonly">
+            <label class="FormField__label" for="address">Heimilisfang</label>
+            <span class="FormField__input" id="address" readonly="">Leynimel 48</span>
           </div>
-					<div className="form__infobox__item">
-            <span>Póstnúmer</span>
-            <p>107</p>
+          <div class="FormField FormField--readonly">
+            <label class="FormField__label" for="postal">Póstnúmer</label>
+            <span class="FormField__input" id="postal" readonly="">107</span>
           </div>
-					<div className="form__infobox__item editable">
-            <span>Sími</span>
-            <p>698 4050</p>
+					<div class="FormField TextInput">
+            <label class="FormField__label" for="phone">Sími</label>
+            <input 
+              class="FormField__input" 
+              type="number" 
+              id="phone" 
+              value="6978792"
+              onChange={() => {}}
+            />
           </div>
-					<div className="form__infobox__item editable">
-            <span>Netfang</span>
-            <p>ragnheidur@snjoark.is</p>
+          <div class="FormField TextInput">
+            <label class="FormField__label" for="email">Netfang</label>
+            <input 
+              class="FormField__input" 
+              type="email" 
+              id="email" 
+              value="magbjo46@hi.is"
+              onChange={() => {}}
+            />
           </div>
-        </div>
-				<div className="form__infobox">
-          <div className="form__infobox__item">
-            <span>Nafn</span>
-            <p>Magnús Björnsson</p>
-          </div>
-					<div className="form__infobox__item">
-            <span>Kennitala</span>
-            <p>010184-6789</p>
-          </div>
-					<div className="form__infobox__item">
-            <span>Heimilisfang</span>
-            <p>Leynimel 48</p>
-          </div>
-					<div className="form__infobox__item">
-            <span>Póstnúmer</span>
-            <p>107</p>
-          </div>
-					<div className="form__infobox__item editable">
-            <span>Sími</span>
-            <p>679 8792</p>
-          </div>
-					<div className="form__infobox__item editable">
-            <span>Netfang</span>
-            <p>magbjo46@hi.is</p>
-          </div>
-        </div>
+        </fieldset>
       </div>
     </div>
   );

@@ -1,21 +1,22 @@
 
 
-const StepperControl = () => {
+const StepperControl = ({ handleClick, currentStep, steps }) => {
   return (
     <>
       <button 
+        type="button"
         className="ButtonTertiary ButtonTertiary--go--back" 
-        // disabled={}
-        onClick={ () => {}}
+        disabled={currentStep === 1 ? true : false}
+        onClick={() => handleClick()}
       >
         Til baka
       </button>
       <button 
-        className="ButtonPrimary ButtonPrimary--go--forward" 
-        // disabled={}
-        onClick={ () => {}}
+        type="button"
+        className="ButtonSecondary" 
+        onClick={() => handleClick("next")}
       >
-        Áfram
+        {currentStep === steps.length ? "Staðfesta" : "Áfram"}
       </button>
     </>
   )

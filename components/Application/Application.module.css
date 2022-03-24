@@ -1,0 +1,3 @@
+.stepper[aria-current="step"]:after {
+    background: var(--color-suld-75);
+}
