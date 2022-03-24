@@ -1,4 +1,3 @@
-
 @charset "UTF-8";
 /*!@deps
 	-basics
@@ -463,6 +462,7 @@ textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
+  min-width: 100px;
 }
 button,
 input {

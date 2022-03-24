@@ -1,3 +1,59 @@
 .stepper[aria-current="step"]:after {
-    background: var(--color-suld-75);
+  background: var(--color-suld-75);
+}
+
+.header {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.form_inbox1 {
+  background-color: #f1f2f3;
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+.form_inbox1 span {
+  border: none;
+}
+
+.form_inbox2 {
+  background-color: #f1f2f3;
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+.form_inbox2 span {
+  border: none;
+}
+
+.flexbox1 {
+  display: flex;
+}
+
+.flexbox2 {
+  display: flex;
+}
+
+.flexbox3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexbox4 {
+  display: flex;
+}
+
+.flexbox5 {
+  display: flex;
+}
+
+.flexbox6 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.minwidth {
+  min-width: 100px;
 }
