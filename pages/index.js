@@ -1,5 +1,5 @@
 import Head from "next/head";
-// import styles from "../styles/Home.module.css
+import style from "../styles/Home.module.css"
 import { useSession, signIn, signOut } from "next-auth/react"
 
 
@@ -94,7 +94,7 @@ export default function Home() {
           <h2 className="ExtraLinks__title">Þjónusta í boði hjá Reykjavíkurborg</h2>
           <ul className="ExtraLinks__list">
             <li className="ExtraLinks__item">
-              <a className="ExtraLinks__card" href="#">
+              <a className="ExtraLinks__card" href="/children">
                 <span className="ExtraLinks__card__title">Börn, unglingar og ungt fólk</span>
               </a>
             </li>

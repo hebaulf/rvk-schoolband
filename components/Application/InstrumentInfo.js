@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { StepperContext } from "../../contexts/StepperContext";
 
 const InstrumentInfo = () => {
   return (
