@@ -1,26 +1,25 @@
 .AboutButton {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 
 .MyCaseWrapper {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
 .TableTitle {
-    display: flex;
-    -webkit-box-align: baseline;
-    align-items: baseline;
+  display: flex;
+  -webkit-box-align: baseline;
+  align-items: baseline;
 }
 
 .TitleWrapper {
-    margin-right: 136px;
+  margin-right: 136px;
 }
 
 .tableWrap {
-    margin-bottom: 6rem;
+  margin-bottom: 6rem;
 }
 
 .table {
-    width: 100%;
+  width: 100%;
 }
-
