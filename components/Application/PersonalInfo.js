@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import style from "./Application.module.css";
 import { StepperContext } from "../../contexts/StepperContext";
 
@@ -8,6 +8,9 @@ const PersonalInfo = () => {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value })
   }
+
+  const [phoneNumber, setPhoneNumber] = useState('123');
+
 
   return (
     <div ClassName={style.personalInfoApplication}>
@@ -79,8 +82,8 @@ const PersonalInfo = () => {
               class="FormField__input" 
               type="number" 
               id="phone" 
-              value="6984050"
-              onChange={() => {}}
+              value={phoneNumber}
+              onChange={(e) => {setPhoneNumber(e.target.value)}}
             />
           </div>
           <div class="FormField TextInput">

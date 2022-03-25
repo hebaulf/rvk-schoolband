@@ -4,7 +4,7 @@ import Image from "next/image";
 const Header = () => {
   return (
     <div className="Layout__header" role="banner">
-      <a className="Layout__header__logo" href="#">
+      <a className="Layout__header__logo" href="/">
         <picture>
           <img src="https://styles.reykjavik.is/assets/reykjavik-logo.svg" alt="Reykjavík lógó. Fara á forsíðu" loading="lazy" />
         </picture>
