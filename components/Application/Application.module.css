@@ -30,34 +30,36 @@
 
 .flexbox1 {
   display: flex;
-  justify-content: space-between;
-  display: inline-flex;
-  flex-wrap: wrap;
+  justify-content: start;
+  gap: 30px;
 }
 
 .flexbox2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 195px;
 }
 
 .flexbox3 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .flexbox4 {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 130px;
 }
 
 .flexbox5 {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 185px;
 }
 
 .flexbox6 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .minwidth {
