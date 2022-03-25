@@ -10,41 +10,41 @@ const PersonalInfo = () => {
   }
 
   return (
-    <div ClassName={style.personalInfoApplication}>
+    <div className={style.personalInfoApplication}>
       <div className="TextBlock">
         <h2>Börn og foreldrar</h2>
         <p>Upplýsingar um foreldra/forsjáraðila koma frá Þjóðskrá og skólakerfum Reykjavíkurborgar. Athugaðu hvort símanúmer og netföng séu rétt áður en þú heldur áfram.</p>
       </div>
 
-      <div class="FormField RadioButtonsGroup" role="group">
-        <h3 class="FormField__label">Börn</h3>
+      <div className="FormField RadioButtonsGroup" role="group">
+        <h3 className="FormField__label">Börn</h3>
         <ul
-          class="FormField__options"
+          className="FormField__options"
           role="group"
           aria-labelledby="label:_7600434-20"
           aria-required="false"
         >
-          <li class="RadioButton FormField__options__item">
+          <li className="RadioButton FormField__options__item">
             <input
-              class="RadioButton__input"
+              className="RadioButton__input"
               type="radio"
               id="_7600434-21"
               name="fruit"
               value="Rögnvaldur Björn Magnússon 030412-5476"
             />
-            <label class="RadioButton__label" for="_7600434-21">
+            <label className="RadioButton__label" for="_7600434-21">
               Rögnvaldur Björn Magnússon <small>030412-5476</small>
             </label>
           </li>
-          <li class="RadioButton FormField__options__item">
+          <li className="RadioButton FormField__options__item">
             <input
-              class="RadioButton__input"
+              className="RadioButton__input"
               type="radio"
               id="_7600434-22"
               name="fruit"
               value="Sigurður Már Magnússon 130816-5476"
             />
-            <label class="RadioButton__label" for="_7600434-22">
+            <label className="RadioButton__label" for="_7600434-22">
               Sigurður Már Magnússon <small>130816-5476</small>
             </label>
           </li>
@@ -55,38 +55,38 @@ const PersonalInfo = () => {
       </div>
 
       <div className={style.infoBox}>
-        <h3 class="FormField__label">Foreldrar / Forsjáraðilar</h3>
+        <h3 className="FormField__label">Foreldrar / Forsjáraðilar</h3>
         <fieldset className="form__infobox">
-          <div class="FormField FormField--readonly">
-            <label class="FormField__label" for="name">Nafn</label>
-            <span class="FormField__input" id="name" readonly="">Ragnheiður Margrét Jónsdóttir</span>
+          <div className="FormField FormField--readonly">
+            <label className="FormField__label" for="name">Nafn</label>
+            <span className="FormField__input" id="name" readonly="">Ragnheiður Margrét Jónsdóttir</span>
           </div>
-          <div class="FormField FormField--readonly">
-            <label class="FormField__label" for="kt">Kennitala</label>
-            <span class="FormField__input" id="kt" readonly="">030484-4556</span>
+          <div className="FormField FormField--readonly">
+            <label className="FormField__label" for="kt">Kennitala</label>
+            <span className="FormField__input" id="kt" readonly="">030484-4556</span>
           </div>
-          <div class="FormField FormField--readonly">
-            <label class="FormField__label" for="address">Heimilisfang</label>
-            <span class="FormField__input" id="address" readonly="">Leynimel 48</span>
+          <div className="FormField FormField--readonly">
+            <label className="FormField__label" for="address">Heimilisfang</label>
+            <span className="FormField__input" id="address" readonly="">Leynimel 48</span>
           </div>
-          <div class="FormField FormField--readonly">
-            <label class="FormField__label" for="postal">Póstnúmer</label>
-            <span class="FormField__input" id="postal" readonly="">107</span>
+          <div className="FormField FormField--readonly">
+            <label className="FormField__label" for="postal">Póstnúmer</label>
+            <span className="FormField__input" id="postal" readonly="">107</span>
           </div>
-					<div class="FormField TextInput">
-            <label class="FormField__label" for="phone">Sími</label>
+					<div className="FormField TextInput">
+            <label className="FormField__label" for="phone">Sími</label>
             <input 
-              class="FormField__input" 
+              className="FormField__input" 
               type="number" 
               id="phone" 
               value="6984050"
               onChange={() => {}}
             />
           </div>
-          <div class="FormField TextInput">
-            <label class="FormField__label" for="email">Netfang</label>
+          <div className="FormField TextInput">
+            <label className="FormField__label" for="email">Netfang</label>
             <input 
-              class="FormField__input" 
+              className="FormField__input" 
               type="email" 
               id="email" 
               value="ragnheidur@snjoark.is"
@@ -96,36 +96,36 @@ const PersonalInfo = () => {
         </fieldset>
 
         <fieldset className="form__infobox">
-          <div class="FormField FormField--readonly">
-            <label class="FormField__label" for="name">Nafn</label>
-            <span class="FormField__input" id="name" readonly="">Magnús Björnsson</span>
+          <div className="FormField FormField--readonly">
+            <label className="FormField__label" for="name">Nafn</label>
+            <span className="FormField__input" id="name" readonly="">Magnús Björnsson</span>
           </div>
-          <div class="FormField FormField--readonly">
-            <label class="FormField__label" for="kt">Kennitala</label>
-            <span class="FormField__input" id="kt" readonly="">010184-6789</span>
+          <div className="FormField FormField--readonly">
+            <label className="FormField__label" for="kt">Kennitala</label>
+            <span className="FormField__input" id="kt" readonly="">010184-6789</span>
           </div>
-          <div class="FormField FormField--readonly">
-            <label class="FormField__label" for="address">Heimilisfang</label>
-            <span class="FormField__input" id="address" readonly="">Leynimel 48</span>
+          <div className="FormField FormField--readonly">
+            <label className="FormField__label" for="address">Heimilisfang</label>
+            <span className="FormField__input" id="address" readonly="">Leynimel 48</span>
           </div>
-          <div class="FormField FormField--readonly">
-            <label class="FormField__label" for="postal">Póstnúmer</label>
-            <span class="FormField__input" id="postal" readonly="">107</span>
+          <div className="FormField FormField--readonly">
+            <label className="FormField__label" for="postal">Póstnúmer</label>
+            <span className="FormField__input" id="postal" readonly="">107</span>
           </div>
-					<div class="FormField TextInput">
-            <label class="FormField__label" for="phone">Sími</label>
+					<div className="FormField TextInput">
+            <label className="FormField__label" for="phone">Sími</label>
             <input 
-              class="FormField__input" 
+              className="FormField__input" 
               type="number" 
               id="phone" 
               value="6978792"
               onChange={() => {}}
             />
           </div>
-          <div class="FormField TextInput">
-            <label class="FormField__label" for="email">Netfang</label>
+          <div className="FormField TextInput">
+            <label className="FormField__label" for="email">Netfang</label>
             <input 
-              class="FormField__input" 
+              className="FormField__input" 
               type="email" 
               id="email" 
               value="magbjo46@hi.is"
