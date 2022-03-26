@@ -27,3 +27,11 @@
 .help {
   margin-bottom: 0.5rem;
 }
+
+.Application__controls {
+  display: flex;
+  justify-content: right;
+}
+.RightAligned {
+  margin-right: 0px;
+}
