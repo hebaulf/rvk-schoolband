@@ -1,3 +1,15 @@
 .textblocklist a {
     display: block;
 }
+
+.SchoolBand__Wrapper {
+    display: flex;
+}
+
+.SchoolBand__Stepper {
+    min-width: 235px;
+}
+
+.SchoolBand__Content {
+    width: 100%;
+}

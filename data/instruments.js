@@ -1,6 +1,8 @@
 export const instruments = [
     {
-        Málmblásturshljóðfæri: [
+        id: "instruments01",
+        type: "Málmblásturshljóðfæri",
+        instrumentlist: [
             "Trompet",
             "Horn",
             "Básúna",
@@ -9,7 +11,9 @@ export const instruments = [
         ]
     },
     {
-        Tréblásturshljóðfæri: [
+        id: "instruments02",
+        type: "Tréblásturshljóðfæri",
+        instrumentlist: [
             "Þverflauta",
             "Óbó",
             "Klarinett",
@@ -18,7 +22,9 @@ export const instruments = [
         ]
     },
     {
-        Ásláttarhljóðfæri: [
+        id: "instruments03",
+        type: "Ásláttarhljóðfæri",
+        instrumentlist: [
             "Sneriltromma",
             "Ásláttarhljómborð",
             "Bassatromma",

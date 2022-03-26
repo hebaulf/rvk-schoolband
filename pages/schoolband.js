@@ -35,29 +35,34 @@ const schoolband = () => {
         <title>Umsókn um skólahljómsveit | RVK - Mínar síður</title>
       </Head>
 
-      <div className={style.schoolBand__Wrapper}>
-				<Stepper
-          steps={steps}
-          currentStep={currentStep} 
-        />
-
-        <HeroBlock
-          title="Hæ, Ragnheiður, þá hefst umsóknarferlið!"
-          text="Vandað tónlistarnám og tónlistaruppeldi fer fram í skólahljómsveitunum fjórum sem starfræktar eru á vegum Reykjavíkurborgar. Sótt er um nám í skólahljómsveit rafrænt. Nota má frístundakortið til að greiða niður námsgjöld."
-          img="/sax.png"
-          btnText="Byrjum Þetta!"
-          btnClass="ButtonPrimary"
-          btnUrl="/application"
-        />
-
-        <p>
-          Ef þú ert nú þegar með barn í skólahljómsveit eða á biðlista getur þú
-          framlengt umsókn eða sagt henni upp <a href="/">hér</a>.
-        </p>
-        <div className="Attention">
-          <a href="/">Kynntu þér nánar</a> hvernig við vinnum með upplýsingarnar
-          þínar
+      <div className={style.SchoolBand__Wrapper}>
+        <div className={style.SchoolBand__Stepper}>
+          <Stepper
+            steps={steps}
+            currentStep={currentStep} 
+          />
         </div>
+
+        <div className={style.SchoolBand__Content}>
+          <HeroBlock
+            title="Hæ, Ragnheiður, þá hefst umsóknarferlið!"
+            text="Vandað tónlistarnám og tónlistaruppeldi fer fram í skólahljómsveitunum fjórum sem starfræktar eru á vegum Reykjavíkurborgar. Sótt er um nám í skólahljómsveit rafrænt. Nota má frístundakortið til að greiða niður námsgjöld."
+            img="/sax.png"
+            btntext="Byrjum Þetta!"
+            btnclass="ButtonPrimary"
+            btnurl="/application"
+          />
+
+          <p>
+            Ef þú ert nú þegar með barn í skólahljómsveit eða á biðlista getur þú
+            framlengt umsókn eða sagt henni upp <a href="/">hér</a>.
+          </p>
+          <div className="Attention">
+            <a href="/">Kynntu þér nánar</a> hvernig við vinnum með upplýsingarnar
+            þínar
+          </div>
+        </div>
+        
       </div>
     </div>
   );

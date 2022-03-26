@@ -1,14 +1,14 @@
 import Head from "next/head";
-import style from "../styles/Home.module.css";
 import { useSession, signIn, signOut } from "next-auth/react";
-import HeroBlock from "../components/HeroBlock/HeroBlock";
 import { rvkServices } from "../data/rvkService";
+import HeroBlock from "../components/HeroBlock/HeroBlock";
+import style from "../styles/Home.module.css";
 
 export const getStaticProps = async () => {
   return {
-      props: {
-        rvkServiceList: rvkServices 
-      }
+    props: {
+      rvkServiceList: rvkServices 
+    }
   }
 }
 
@@ -50,28 +50,24 @@ export default function Home({ rvkServiceList }) {
           btnUrl="/"
         />
         
-        <div className="MyCasesViewstyles__MyCaseWrapper">
-          <div className="MyCasesViewstyles__TableTitleContainer">
-            <div className="MyCasesViewstyles__TitleWrapper">
+        <div className={`MyCasesViewstyles__MyCaseWrapper ${style.MyCaseWrapper}`}>
+          <div className={`MyCasesViewstyles__TableTitleContainer ${style.TableTitle}`}>
+            <div className={`MyCasesViewstyles__TitleWrapper ${style.TitleWrapper}`}>
               <h2 className="Heading">Mín mál</h2>
             </div>
-            <a className="ButtonTertiary" href="#">
+            <a className="ButtonTertiary" href="/">
               Sjá öll mál
             </a>
           </div>
-          <div className="Attention">
-            Þegar þú hefur sent inn umsókn þá mun birtast listi yfir þær hér.
-          </div>
+          {/* <div className="Attention">Þegar þú hefur sent inn umsókn þá mun birtast listi yfir þær hér.</div> */}
         </div>
       </div>
 
-      <div className="TableWrapper TableWrapper--BasicTable">
-        <table className="BasicTable">
+      <div className={`TableWrapper TableWrapper--BasicTable ${style.tableWrap}`}>
+        <table className={`BasicTable ${style.table}`}>
           <thead>
             <tr>
-              <th className="Cell--number" scope="row">
-                Nr. umsóknar
-              </th>
+              <th className="Cell--number" scope="row">Nr. umsóknar</th>
               <th>Lýsing</th>
               <th>Sent dags. / kl</th>
               <th>Staða</th>
@@ -105,7 +101,7 @@ export default function Home({ rvkServiceList }) {
           </h2>
           <ul className="ExtraLinks__list">
             {rvkServiceList.map(rvkService => (
-              <li className="ExtraLinks__item">
+              <li key={rvkService.id} className="ExtraLinks__item">
                 <a className="ExtraLinks__card" href={rvkService.url}>
                   <span className="ExtraLinks__card__title">{rvkService.text}</span>
                 </a>

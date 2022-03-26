@@ -1,5 +1,5 @@
 
-const HeroBlock = ({ title, text, img, btnText, btnClass, btnUrl }) => {
+const HeroBlock = ({ title, text, img, btntext, btnclass, btnurl }) => {
   return (
     <div className="HeroBlock">
         <h1 className="HeroBlock__title">{title}</h1>
@@ -11,10 +11,10 @@ const HeroBlock = ({ title, text, img, btnText, btnClass, btnUrl }) => {
           />
         </picture>
         <div className="HeroBlock__summary">{text}</div>
-        {btnText 
+        {btntext 
             ? (
                 <div className="HeroBlock__buttons">
-                    <a className={btnClass} href={btnUrl}>{btnText}</a>
+                    <a className={btnclass} href={btnurl}>{btntext}</a>
                 </div>
                 ) 
             : ("")
