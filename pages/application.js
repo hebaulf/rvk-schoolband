@@ -9,7 +9,7 @@ import InstrumentInfo from "../components/Application/InstrumentInfo";
 import OtherInfo from "../components/Application/OtherInfo";
 import Confirm from "../components/Application/Confirm";
 
-import style from "../styles/Application.module.css";
+import style from "../styles/Home.module.css";
 
 const ApplicationPage = () => {
   const [currentStep, setCurrentStep] = useState(1);
