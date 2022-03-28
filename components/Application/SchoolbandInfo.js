@@ -65,7 +65,6 @@ const SchoolbandInfo = () => {
             address={schoolband.streetAddress}
             postalcode={schoolband.postalCode}
             linkurl={schoolband.infoLink}
-            checkboxtext={"Velja þennan skóla"}
             accordiontitle={"Sjá alla skóla sem tilheyra skólahljómsveitinni"}
             accordioncontent={
               <ul className={style.SchoolbandList}>
@@ -76,6 +75,7 @@ const SchoolbandInfo = () => {
                 ))}
               </ul>
             }
+            checkboxtext={"Velja þennan skóla"}
           />
         </div>
       ))}
