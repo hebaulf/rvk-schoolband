@@ -1,18 +1,22 @@
+import { useRouter } from "next/router";
 import { useState } from "react";
-import { StepperContext } from "../contexts/StepperContext";
-import Stepper from "../components/Application/Stepper";
-import StepperControl from "../components/Application/StepperControl";
+import { StepperContext } from "../../contexts/StepperContext";
+import Stepper from "../../components/Application/Stepper";
+import StepperControl from "../../components/Application/StepperControl";
 
-import PersonalInfo from "../components/Application/PersonalInfo";
-import SchoolbandInfo from "../components/Application/schoolBandInfo";
-import InstrumentInfo from "../components/Application/InstrumentInfo";
-import OtherInfo from "../components/Application/OtherInfo";
-import Confirm from "../components/Application/Confirm";
+import PersonalInfo from "../../components/Application/PersonalInfo";
+import SchoolbandInfo from "../../components/Application/schoolBandInfo";
+import InstrumentInfo from "../../components/Application/InstrumentInfo";
+import OtherInfo from "../../components/Application/OtherInfo";
+import Confirm from "../../components/Application/Confirm";
 
-import style from "../styles/Home.module.css";
+import style from "../../styles/Home.module.css";
 
-const ApplicationPage = () => {
-  const [currentStep, setCurrentStep] = useState(1);
+const ApplicationPage = (props) => {
+  const router = useRouter();
+
+  // const [currentStep, setCurrentStep] = useState();
+  const currentStep = Number(router.query.step);
   const [userData, setUserData] = useState("");
   const [finalData, setFinalData] = useState([]);
 
@@ -39,6 +43,8 @@ const ApplicationPage = () => {
     }
   };
 
+  console.log("props:", router.query);
+
   const handleClick = (direction) => {
     let newStep = currentStep;
 
@@ -51,8 +57,11 @@ const ApplicationPage = () => {
   return (
     <div className={style.Application__wrapper}>
       <div className={style.Application__stepper}>
+        
         {/* Stepper */}
         <Stepper steps={steps} currentStep={currentStep} />
+        
+        {/* Infobox */}
         <div className={style.Application__help}>
           <p className={style.help}>
             <strong>Vantar Þig aðstoð?</strong>
@@ -63,7 +72,8 @@ const ApplicationPage = () => {
       </div>
 
       <div className={style.Application__form}>
-        {/* Display Components */}
+        
+        {/* Display Steps */}
         <div className={style.Application__data}>
           <StepperContext.Provider
             value={{
@@ -73,13 +83,13 @@ const ApplicationPage = () => {
               setFinalData,
             }}
           >
-            {displayStep(currentStep)}
+            {displayStep(Number(router.query.step))}
           </StepperContext.Provider>
         </div>
-        {/* Navigation Controls */}
+        
+        {/* Stepper Controls */}
         <div className={style.Application__controls}>
           <StepperControl
-            handleClick={handleClick}
             currentStep={currentStep}
             steps={steps}
           />

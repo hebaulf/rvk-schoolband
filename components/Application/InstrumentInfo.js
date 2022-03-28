@@ -35,8 +35,8 @@ const InstrumentInfo = () => {
           label="Vinsamlegast veljið hljóðfæri"
           options={instruments.map((instrument) => (
             <optgroup key={instrument.id} label={instrument.type}>
-              {instrument.instrumentlist.map((instrumentitem) => (
-                <option value={instrumentitem}>{instrumentitem}</option>
+              {instrument.instrumentlist.map((instrumentitem, index) => (
+                <option key={index} value={instrumentitem}>{instrumentitem}</option>
               ))}
             </optgroup>
           ))}
@@ -52,8 +52,8 @@ const InstrumentInfo = () => {
           label="Fyrsta varaval"
           options={instruments.map((instrument) => (
             <optgroup key={instrument.id} label={instrument.type}>
-              {instrument.instrumentlist.map((instrumentitem) => (
-                <option value={instrumentitem}>{instrumentitem}</option>
+              {instrument.instrumentlist.map((instrumentitem, index) => (
+                <option key={index} value={instrumentitem}>{instrumentitem}</option>
               ))}
             </optgroup>
           ))}
@@ -63,8 +63,8 @@ const InstrumentInfo = () => {
           label="Annað varaval"
           options={instruments.map((instrument) => (
             <optgroup key={instrument.id} label={instrument.type}>
-              {instrument.instrumentlist.map((instrumentitem) => (
-                <option value={instrumentitem}>{instrumentitem}</option>
+              {instrument.instrumentlist.map((instrumentitem, index) => (
+                <option key={index} value={instrumentitem}>{instrumentitem}</option>
               ))}
             </optgroup>
           ))}
