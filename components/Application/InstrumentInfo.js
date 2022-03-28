@@ -28,7 +28,7 @@ const InstrumentInfo = () => {
 
       {/* Hljóðfæri í aðalval */}
       <div className={style.infoBox}>
-        <h3 className="FormField__label">Hljóðfæri í aðalval</h3>
+        <h3 className={style.infoBoxTitle}>Hljóðfæri í aðalval</h3>
         <hr />
         <Dropdown
           selectid="adalvalshljodfaeri"
@@ -47,7 +47,7 @@ const InstrumentInfo = () => {
 
       {/* Hljóðfæri í varaval */}
       <div className={style.infoBox}>
-        <h3>Hljóðfæri í aðalval</h3>
+        <h3 className={style.infoBoxTitle}>Hljóðfæri í aðalval</h3>
         <hr />
         <Dropdown
           selectid="varavalshljodfaeri1"
@@ -86,7 +86,7 @@ const InstrumentInfo = () => {
 
       {/* Til í hvaða hljóðfæri sem er */}
       <div className={style.infoBox_checkBox}>
-        <div className="Checkbox">
+        <div className={style.infoBox_checkBox_inner}>
           <input className="Checkbox__input" type="checkbox" id="_9027003-5" />
           <label className="Checkbox__label" htmlFor="_9027003-5">
             Til í hvaða hljóðfæri sem er!

@@ -1,15 +1,22 @@
 .textblocklist a {
-    display: block;
+  display: block;
 }
 
 .SchoolBand__Wrapper {
-    display: flex;
+  display: flex;
 }
 
 .SchoolBand__Stepper {
-    min-width: 235px;
+  min-width: 235px;
 }
 
 .SchoolBand__Content {
-    width: 100%;
+  width: 100%;
+}
+.SchoolBand__Content p {
+  margin-bottom: 32px;
+  width: 583px;
+}
+.SchoolBand__Content .Alert {
+  width: 583px;
 }

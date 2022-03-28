@@ -63,6 +63,7 @@
 .Application__controls {
   display: flex;
   justify-content: right;
+  margin-top: 88px;
 }
 .RightAligned {
   margin-right: 0px;

@@ -6,11 +6,11 @@ import HeroBlock from "../components/HeroBlock/HeroBlock";
 
 const Schoolband = () => {
   const steps = [
-    "Börn og Forsjáraðilar", 
-    "Val á skólahljómsveit", 
-    "Val á hljóðfæri", 
-    "Upplýsingar", 
-    "Yfirlit og staðfesting"
+    "Börn og Forsjáraðilar",
+    "Val á skólahljómsveit",
+    "Val á hljóðfæri",
+    "Upplýsingar",
+    "Yfirlit og staðfesting",
   ];
 
   return (
@@ -21,10 +21,7 @@ const Schoolband = () => {
 
       <div className={style.SchoolBand__Wrapper}>
         <div className={style.SchoolBand__Stepper}>
-          <Stepper
-            steps={steps}
-            currentStep={null} 
-          />
+          <Stepper steps={steps} currentStep={null} />
         </div>
 
         <div className={style.SchoolBand__Content}>
@@ -38,15 +35,14 @@ const Schoolband = () => {
           />
 
           <p>
-            Ef þú ert nú þegar með barn í skólahljómsveit eða á biðlista getur þú
-            framlengt umsókn eða sagt henni upp <a href="#">hér</a>.
+            Ef þú ert nú þegar með barn í skólahljómsveit eða á biðlista getur
+            þú framlengt umsókn eða sagt henni upp <a href="#">hér</a>.
           </p>
-          <div className="Attention">
-            <a href="#">Kynntu þér nánar</a> hvernig við vinnum með upplýsingarnar
-            þínar
+          <div className="Alert Alert--info Alert--closable">
+            <a href="#">Kynntu þér nánar</a> hvernig við vinnum með
+            upplýsingarnar þínar
           </div>
         </div>
-        
       </div>
     </div>
   );
