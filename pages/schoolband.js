@@ -38,10 +38,10 @@ const Schoolband = () => {
 
           <p>
             Ef þú ert nú þegar með barn í skólahljómsveit eða á biðlista getur þú
-            framlengt umsókn eða sagt henni upp <a href="/">hér</a>.
+            framlengt umsókn eða sagt henni upp <a href="#">hér</a>.
           </p>
           <div className="Attention">
-            <a href="/">Kynntu þér nánar</a> hvernig við vinnum með upplýsingarnar
+            <a href="#">Kynntu þér nánar</a> hvernig við vinnum með upplýsingarnar
             þínar
           </div>
         </div>

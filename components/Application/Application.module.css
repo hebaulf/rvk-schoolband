@@ -19,7 +19,15 @@
 .infoBox__editable {
   display: flex;
   justify-content: flex-start;
-  gap: 30px;
+  gap: 30px; 
+}
+
+.infoBox__readonly .infoBox__item:first-child {
+  width: 60%;
+}
+
+.infoBox__readonly .infoBox__item:last-child {
+  width: 40%;
 }
 
 .infoBox__item {
@@ -35,3 +43,19 @@
   display: block;
   width: 100%;
 }
+
+.title__form {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.paymentInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+

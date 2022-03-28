@@ -55,7 +55,7 @@ export default function Home({ rvkServiceList }) {
             <div className={`MyCasesViewstyles__TitleWrapper ${style.TitleWrapper}`}>
               <h2 className="Heading">Mín mál</h2>
             </div>
-            <a className="ButtonTertiary" href="/">
+            <a className="ButtonTertiary" href="#">
               Sjá öll mál
             </a>
           </div>
@@ -114,7 +114,4 @@ export default function Home({ rvkServiceList }) {
   );
 }
 
-export async function getStaticProps() {
-  console.log("URL", process.env.DATABASE_URL);
-  return {props: {name: "Jón"}}
-}
+

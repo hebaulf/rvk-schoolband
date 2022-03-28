@@ -27,12 +27,15 @@ const Confirm = () => {
     <div>
       <TextBlock 
         headingsize="h2"
-        title="Nánari upplýsingar um umsækjanda"
-        text="Hér koma frekari upplýsingar sem eru gagnlegar fyrir úrvinnslu umsókna."
+        title="Yfirlit"
+        text="Þegar þú hefur farið yfir og staðfest upplýsingarnar hér að neðan klárast umsóknarferlið."
       />
 
       {/* Biðlisti */}
-      <h3 className={`FormField__label ${style.header}`}>Barn</h3>
+      <div className={style.title__form}>
+        <h3 className={`FormField__label ${style.header}`}>Barn</h3>
+        <a className="ButtonTertiary" href="#"> Breyta </a>
+      </div>
       <div className={style.infoBox}>
         <div className={`form__infobox ${style.infoBox__readonly}`}>
           <div className={`FormField FormField--readonly ${style.infoBox__item}`}>
@@ -48,9 +51,12 @@ const Confirm = () => {
 
       {/* Parents info */}
       <div className={style.parentInfo}>
+      <div className={style.title__form}>
         <h3 className={`FormField__label ${style.header}`}>
           Foreldrar / Forsjáraðilar
         </h3>
+        <a className="ButtonTertiary" href="#"> Breyta </a>
+      </div>
         {parents.map(parent => (
           <fieldset key={parent.id} className={`form ${style.infoBox}`}>
             <div className={`form__infobox ${style.infoBox__readonly}`}>
@@ -73,7 +79,7 @@ const Confirm = () => {
                 <span className={`FormField__input ${style.minwidth}`} id="postal" readOnly>{parent.postalCode}</span>
               </div>
             </div>
-            <div className={`form__infobox ${style.infoBox__editable}`}>
+            <div className={`form__infobox ${style.infoBox__readonly}`}>
               <div className={`FormField TextInput ${style.infoBox__item}`}>
                 <label className="FormField__label" htmlFor="phone">Sími</label>
                 <span className="FormField__input" type="number" id="phone" readOnly>{parent.phone}</span>
@@ -88,11 +94,14 @@ const Confirm = () => {
       </div>
 
       {/* Skólahljómsveit */}
-      <h3 className={`FormField__label ${style.header}`}>Skólahljómsveit</h3>
+      <div className={style.title__form}>
+        <h3 className={`FormField__label ${style.header}`}>Skólahljómsveit</h3>
+        <a className="ButtonTertiary" href="#"> Breyta </a>
+      </div>
       <div className={style.infoBox}>
         <h3 className={`FormField__label`}>Skólahljómsveit Vestur- og Miðbæjar</h3>
         <hr />
-        <fieldset className={`form ${style.infoBox}`}>
+        <fieldset>
           <div className={`form__infobox`}>
             <div className={`FormField FormField--readonly ${style.infoBox__item}`}>
               <label className="FormField__label" htmlFor="instrument1">Hljóðfæri - Aðalval</label>
@@ -116,13 +125,15 @@ const Confirm = () => {
       <h3 className={`FormField__label ${style.header}`}>Skólagjöld</h3>
       <div className={style.infoBox}>
         
+        <div className={style.paymentInfo}>
+          <p>Skólahljómsveit</p><p>39.520 kr./árið</p> 
+        </div>
         <div>
-          <p>Skólahljómsveit<span><a href="#">Sjá sundurliðun gjalda</a></span></p>
-          <p>39.520 kr./ár</p>
+          <a href="#">Sjá sundurliðun gjalda</a>
         </div>
         <hr />
         <div>
-          <p>Nýta Frístundastyrk<span><a href="#">Nánar um Frístundastyrk</a></span></p>
+          <p>Nýta Frístundastyrk<span><br/><a href="#">Nánar um Frístundastyrk</a></span></p>
           <div className="Checkbox">
             <input className="Checkbox__input" type="checkbox" id="cooperation" />
             <label className="Checkbox__label" htmlFor="cooperation">
@@ -131,19 +142,30 @@ const Confirm = () => {
           </div>
         </div>
         <hr />
-        <fieldset className={`form ${style.infoBox}`}>
+        <fieldset>
+        
           <h3 className={`FormField__label`}>Greiðandi</h3>
           <div className={`form__infobox ${style.infoBox__readonly}`}>
             <div className={`FormField FormField--readonly ${style.infoBox__item}`}>
+              
               <label className="FormField__label" htmlFor="name">Nafn</label>
               <span className="FormField__input" id="name" readOnly>Ragnheiður Margrét Jónsdóttir</span>
             </div>
+
             <div className={`FormField FormField--readonly ${style.infoBox__item}`}>
               <label className="FormField__label" htmlFor="ssn">Kennitala</label>
               <span className="FormField__input" id="ssn" readOnly>030484-4556</span>
             </div>
+            
           </div>
         </fieldset>
+
+        <div>
+        <hr />
+          <p>Greiðsluseðill er sendur í heimabanka tvisvar yfir árið. 
+            Til að velja annan greiðslumáta þarf að hafa samband við skrifstofu skólans. 
+            Hægt er að nýta frístundarstyrk upp í skólagjöld. </p>
+        </div>
       </div>
     </div>
   )
