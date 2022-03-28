@@ -2,10 +2,8 @@ import Head from "next/head";
 import style from "../styles/Children.module.css";
 import Stepper from "../components/Application/Stepper";
 import HeroBlock from "../components/HeroBlock/HeroBlock";
-import { useState } from "react";
 
-const schoolband = () => {
-	const [currentStep, setCurrentStep] = useState();
+const Schoolband = () => {
   const steps = [
     "Börn og Forsjáraðilar", 
     "Val á skólahljómsveit", 
@@ -13,21 +11,6 @@ const schoolband = () => {
     "Upplýsingar", 
     "Yfirlit og staðfesting"
   ];
-
-  const displayStep = (step) => {
-    switch(step) {
-      case 1: 
-        return <PersonalInfo />
-      case 2: 
-        return <SchoolbandInfo />
-      case 3: 
-        return <InstrumentInfo />
-      case 4: 
-        return <OtherInfo />
-      case 5: 
-        return <Confirm />
-    }
-  }
 
   return (
     <div className="container">
@@ -39,7 +22,7 @@ const schoolband = () => {
         <div className={style.SchoolBand__Stepper}>
           <Stepper
             steps={steps}
-            currentStep={currentStep} 
+            currentStep={null} 
           />
         </div>
 
@@ -68,4 +51,4 @@ const schoolband = () => {
   );
 };
 
-export default schoolband;
+export default Schoolband;

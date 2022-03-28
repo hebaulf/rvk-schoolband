@@ -11,7 +11,7 @@ export const getStaticProps = async () => {
     }
 }
 
-const children = ({ applicationLinkList }) => {
+const Children = ({ applicationLinkList }) => {
 
   return (
     <div className="container">
@@ -35,4 +35,4 @@ const children = ({ applicationLinkList }) => {
   );
 };
 
-export default children;
+export default Children;
