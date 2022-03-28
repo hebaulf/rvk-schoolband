@@ -35,8 +35,10 @@ const InstrumentInfo = () => {
           label="Vinsamlegast veljið hljóðfæri"
           options={instruments.map((instrument) => (
             <optgroup key={instrument.id} label={instrument.type}>
-              {instrument.instrumentlist.map((instrumentitem) => (
-                <option value={instrumentitem}>{instrumentitem}</option>
+              {instrument.instrumentlist.map((instrumentitem, index) => (
+                <option key={index} value={instrumentitem}>
+                  {instrumentitem}
+                </option>
               ))}
             </optgroup>
           ))}
@@ -52,8 +54,10 @@ const InstrumentInfo = () => {
           label="Fyrsta varaval"
           options={instruments.map((instrument) => (
             <optgroup key={instrument.id} label={instrument.type}>
-              {instrument.instrumentlist.map((instrumentitem) => (
-                <option value={instrumentitem}>{instrumentitem}</option>
+              {instrument.instrumentlist.map((instrumentitem, index) => (
+                <option key={index} value={instrumentitem}>
+                  {instrumentitem}
+                </option>
               ))}
             </optgroup>
           ))}
@@ -63,8 +67,10 @@ const InstrumentInfo = () => {
           label="Annað varaval"
           options={instruments.map((instrument) => (
             <optgroup key={instrument.id} label={instrument.type}>
-              {instrument.instrumentlist.map((instrumentitem) => (
-                <option value={instrumentitem}>{instrumentitem}</option>
+              {instrument.instrumentlist.map((instrumentitem, index) => (
+                <option key={index} value={instrumentitem}>
+                  {instrumentitem}
+                </option>
               ))}
             </optgroup>
           ))}
@@ -79,7 +85,7 @@ const InstrumentInfo = () => {
       </div>
 
       {/* Til í hvaða hljóðfæri sem er */}
-      <div className={style.infoBox}>
+      <div className={style.infoBox_checkBox}>
         <div className="Checkbox">
           <input className="Checkbox__input" type="checkbox" id="_9027003-5" />
           <label className="Checkbox__label" htmlFor="_9027003-5">

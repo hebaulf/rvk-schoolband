@@ -7,10 +7,10 @@ import style from "../styles/Home.module.css";
 export const getStaticProps = async () => {
   return {
     props: {
-      rvkServiceList: rvkServices 
-    }
-  }
-}
+      rvkServiceList: rvkServices,
+    },
+  };
+};
 
 export default function Home({ rvkServiceList }) {
   const { data: session } = useSession();
@@ -41,7 +41,7 @@ export default function Home({ rvkServiceList }) {
           /> 
         */}
 
-        <HeroBlock 
+        <HeroBlock
           title="Hæ, Ragnheiður"
           text="Hér finnur þú allar umsóknir borgarinnar. Sumar eru rafrænar, en aðrar á eyðublöðum. Eyðublöð má fylla út og senda með tölvupósti eða prenta út og skila á pappír."
           img="https://styles.reykjavik.is/assets/illustrations/borgarstjori3.png"
@@ -49,10 +49,16 @@ export default function Home({ rvkServiceList }) {
           btnClass="ButtonTertiary"
           btnUrl="/"
         />
-        
-        <div className={`MyCasesViewstyles__MyCaseWrapper ${style.MyCaseWrapper}`}>
-          <div className={`MyCasesViewstyles__TableTitleContainer ${style.TableTitle}`}>
-            <div className={`MyCasesViewstyles__TitleWrapper ${style.TitleWrapper}`}>
+
+        <div
+          className={`MyCasesViewstyles__MyCaseWrapper ${style.MyCaseWrapper}`}
+        >
+          <div
+            className={`MyCasesViewstyles__TableTitleContainer ${style.TableTitle}`}
+          >
+            <div
+              className={`MyCasesViewstyles__TitleWrapper ${style.TitleWrapper}`}
+            >
               <h2 className="Heading">Mín mál</h2>
             </div>
             <a className="ButtonTertiary" href="#">
@@ -63,11 +69,15 @@ export default function Home({ rvkServiceList }) {
         </div>
       </div>
 
-      <div className={`TableWrapper TableWrapper--BasicTable ${style.tableWrap}`}>
+      <div
+        className={`TableWrapper TableWrapper--BasicTable ${style.tableWrap}`}
+      >
         <table className={`BasicTable ${style.table}`}>
           <thead>
             <tr>
-              <th className="Cell--number" scope="row">Nr. umsóknar</th>
+              <th className="Cell--number" scope="row">
+                Nr. umsóknar
+              </th>
               <th>Lýsing</th>
               <th>Sent dags. / kl</th>
               <th>Staða</th>
@@ -100,10 +110,12 @@ export default function Home({ rvkServiceList }) {
             Þjónusta í boði hjá Reykjavíkurborg
           </h2>
           <ul className="ExtraLinks__list">
-            {rvkServiceList.map(rvkService => (
+            {rvkServiceList.map((rvkService) => (
               <li key={rvkService.id} className="ExtraLinks__item">
                 <a className="ExtraLinks__card" href={rvkService.url}>
-                  <span className="ExtraLinks__card__title">{rvkService.text}</span>
+                  <span className="ExtraLinks__card__title">
+                    {rvkService.text}
+                  </span>
                 </a>
               </li>
             ))}
@@ -113,5 +125,3 @@ export default function Home({ rvkServiceList }) {
     </div>
   );
 }
-
-

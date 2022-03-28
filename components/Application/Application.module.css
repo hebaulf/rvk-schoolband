@@ -44,6 +44,7 @@
   width: 100%;
 }
 
+<<<<<<< HEAD
 .title__form {
   display: flex;
   align-items: baseline;
@@ -59,3 +60,18 @@
 
 
 
+=======
+.DefaultSchoolBand h3 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.infoBox_checkBox {
+  background-color: #f1f2f3;
+  margin-bottom: 1rem;
+  padding: 4rem;
+  margin-bottom: 2rem;
+}
+>>>>>>> 6122ee1ba182ea43ea4a805528f1e6e35f8494c3
