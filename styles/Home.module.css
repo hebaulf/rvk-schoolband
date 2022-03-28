@@ -1,3 +1,7 @@
+.layout {
+  z-index: 10;
+}
+
 .AboutButton {
   margin-top: 80px;
 }

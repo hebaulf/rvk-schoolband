@@ -9,6 +9,7 @@ import SchoolbandInfo from "../../components/Application/schoolBandInfo";
 import InstrumentInfo from "../../components/Application/InstrumentInfo";
 import OtherInfo from "../../components/Application/OtherInfo";
 import Confirm from "../../components/Application/Confirm";
+import Complete from "../../components/Application/Complete";
 
 import style from "../../styles/Home.module.css";
 
@@ -32,6 +33,7 @@ const ApplicationPage = (props) => {
     "Val á hljóðfæri",
     "Upplýsingar",
     "Yfirlit og staðfesting",
+    "Staðfesting",
   ];
 
   const displayStep = (step) => {
@@ -46,6 +48,8 @@ const ApplicationPage = (props) => {
         return <OtherInfo />;
       case 5:
         return <Confirm />;
+      case 6:
+        return <Complete />;
     }
   };
 
@@ -94,15 +98,17 @@ const ApplicationPage = (props) => {
         </div>
         
         {/* Stepper Controls */}
-        <div className={style.Application__controls}>
-          <StepperControl
-            currentStep={currentStep}
-            steps={steps}
-          />
-        </div>
+        {currentStep != steps.length && 
+          <div className={style.Application__controls}>
+            <StepperControl
+              currentStep={currentStep}
+              steps={steps}
+            />
+          </div>
+        }
       </div>
     </div>
   );
-};
+}; 
 
 export default ApplicationPage;
