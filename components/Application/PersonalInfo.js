@@ -39,6 +39,7 @@ const PersonalInfo = () => {
           <li class="RadioButton FormField__options__item">
             <input
               class="RadioButton__input"
+              disabled="true"
               type="radio"
               id="_7600434-22"
               name="fruit"
