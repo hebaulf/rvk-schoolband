@@ -11,7 +11,8 @@
 .infoBox {
   background-color: #f1f2f3;
   margin-bottom: 1rem;
-  padding: 2rem;
+  padding: 4rem;
+  margin-bottom: 2rem;
 }
 
 .infoBox__readonly,
@@ -23,14 +24,6 @@
 
 .infoBox__item {
   width: 50%;
-}
-
-.infoBox__readonly .infoBox__item:first-child {
-  width: 60%;
-}
-
-.infoBox__readonly .infoBox__item:last-child {
-  width: 40%;
 }
 
 .infoBox__item span {
