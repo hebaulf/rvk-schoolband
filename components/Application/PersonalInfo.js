@@ -58,41 +58,6 @@ const PersonalInfo = (props) => {
         </p>
       </div>
 
-<<<<<<< HEAD
-      <div class="FormField RadioButtonsGroup" role="group">
-        <h3 class="FormField__label">Börn</h3>
-        <ul
-          class="FormField__options"
-          role="group"
-          aria-labelledby="label:_7600434-20"
-          aria-required="false"
-        >
-          <li class="RadioButton FormField__options__item">
-            <input
-              class="RadioButton__input"
-              type="radio"
-              id="_7600434-21"
-              name="fruit"
-              value="Rögnvaldur Björn Magnússon 030412-5476"
-            />
-            <label class="RadioButton__label" for="_7600434-21">
-              Rögnvaldur Björn Magnússon <small>030412-5476</small>
-            </label>
-          </li>
-          <li class="RadioButton FormField__options__item">
-            <input
-              class="RadioButton__input"
-              disabled="true"
-              type="radio"
-              id="_7600434-22"
-              name="fruit"
-              value="Sigurður Már Magnússon 130816-5476"
-            />
-            <label class="RadioButton__label" for="_7600434-22">
-              Sigurður Már Magnússon <small>130816-5476</small>
-            </label>
-          </li>
-=======
       {/* Kids radio buttons */}
       <h3 className="FormField__label">Börn</h3>
       <div className="FormField RadioButtonsGroup" role="group">
@@ -112,7 +77,6 @@ const PersonalInfo = (props) => {
               </label>
             </li>
           ))}
->>>>>>> b9797e8cd3d8abd4ee6502ef1a458f58b4d14fe4
         </ul>
         
         {/* Alert */}
