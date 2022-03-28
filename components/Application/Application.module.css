@@ -1,3 +1,44 @@
 .stepper[aria-current="step"]:after {
-    background: var(--color-suld-75);
+  background: var(--color-suld-75);
+}
+
+.header {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.infoBox {
+  background-color: #f1f2f3;
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+.infoBox__readonly,
+.infoBox__editable {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.infoBox__item {
+  width: 50%;
+}
+
+.infoBox__readonly .infoBox__item:first-child {
+  width: 60%;
+}
+
+.infoBox__readonly .infoBox__item:last-child {
+  width: 40%;
+}
+
+.infoBox__item span {
+  white-space: nowrap;
+  border: none;
+}
+
+.schoolbandinfo {
+  display: block;
+  width: 100%;
 }

@@ -1,8 +1,37 @@
 .Application__wrapper {
-    display: flex;
+  display: flex;
 }
 
 .Application__stepper {
-    width: 170px;
-    margin-right: 4rem;
+  width: 170px;
+  margin-right: 4rem;
+}
+
+.Application__help {
+  background-color: #e8eeff;
+  position: absolute;
+  width: 169px;
+  padding: 1rem;
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+}
+
+.number {
+  color: #0367e1;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.help {
+  margin-bottom: 0.5rem;
+}
+
+.Application__controls {
+  display: flex;
+  justify-content: right;
+}
+.RightAligned {
+  margin-right: 0px;
 }
