@@ -8,16 +8,6 @@ const SchoolbandInfo = () => {
   const defaultSchoolBand = schoolsBands[0];
   const defaultSchoolBandName = defaultSchoolBand.name;
 
-  const schoolBandSchoolList = (
-    <ul className={style.SchoolbandList}>
-      {schoolsBands.map((schoolband, index) => (
-        <li key={index} className={style.SchoolbandListItem}>
-          {schoolband}
-        </li>
-      ))}
-    </ul>
-  );
-
   return (
     <div className={style.SchoolBandInfo}>
       <TextBlock

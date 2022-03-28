@@ -113,8 +113,3 @@ export default function Home({ rvkServiceList }) {
     </div>
   );
 }
-
-export async function getStaticProps() {
-  console.log("URL", process.env.DATABASE_URL);
-  return {props: {name: "Jón"}}
-}
