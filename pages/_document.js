@@ -37,7 +37,7 @@ export default function Document() {
           href="https://styles.reykjavik.is/bundle/v0.8?m=-basics,AccordionList,ActionCards,Attention,BreadCrumbs,ButtonPrimary,ButtonSecondary,ButtonTertiary,ButtonBack,CityBlock,ExtraLinks,Form,WizardStepper,WizardLayout,WizardLayoutClose,TextInput,Checkbox,CheckboxGroup,CheckboxButtonsGroup,CheckboxButton,GridBlocks,HeroBlock,Modal,TextBlock,Datepicker,Tabs,FooterInfo,Layout-full,Heading,SubHeading,PageHeading,MainMenu,Selectbox,TagPill,NameCards,FileInput,InfoBlock,IslandPageBlock,SearchInput,PageFilter,RadioButtonsGroup"
         />
       </Head>
-      <body className={'bgrBubbles'}>
+      <body>
         <Main />
         <NextScript />
       </body>

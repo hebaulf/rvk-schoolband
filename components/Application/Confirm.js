@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { StepperContext } from "../../contexts/StepperContext";
 import TextBlock from "../TextBlock/TextBlock";
 import style from "./Application.module.css";
 

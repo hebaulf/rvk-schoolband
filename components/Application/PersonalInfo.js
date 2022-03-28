@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import style from "./Application.module.css";
 import { StepperContext } from "../../contexts/StepperContext";
+import style from "./Application.module.css";
 
 const parents = [
   {
@@ -38,10 +38,9 @@ const kids = [
   },
 ];
 
-const PersonalInfo = (props) => {
-  const [phoneNumber, setPhoneNumber] = useState("123");
-  
+const PersonalInfo = () => {
   const { userData, setUserData } = useContext(StepperContext);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
@@ -115,11 +114,11 @@ const PersonalInfo = (props) => {
             <div className={`form__infobox ${style.infoBox__editable}`}>
               <div className={`FormField TextInput ${style.infoBox__item}`}>
                 <label className="FormField__label" htmlFor="phone">Sími</label>
-                <input className="FormField__input" type="number" id="phone" value={parent.phone} onChange={(e) => {e.target.value}} />
+                <input className="FormField__input" type="number" id="phone" name={`simi_${parent.id}`} value={userData[`simi_${parent.id}`] || ""} onChange={handleChange} />
               </div>
               <div className={`FormField TextInput ${style.infoBox__item}`}>
                 <label className="FormField__label" htmlFor="email">Netfang</label>
-                <input className="FormField__input" type="email" id="email" value={parent.email} onChange={(e) => {e.target.value}} />
+                <input className="FormField__input" type="email" id="email" name={`netfang_${parent.id}`} value={userData[`netfang_${parent.id}`] || ""} onChange={handleChange} />
               </div>
             </div>
           </fieldset>

@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { StepperContext } from "../../contexts/StepperContext";
 import Stepper from "../../components/Application/Stepper";
 import StepperControl from "../../components/Application/StepperControl";
@@ -17,10 +17,14 @@ import style from "../../styles/Home.module.css";
 const ApplicationPage = (props) => {
   const router = useRouter();
 
+  useEffect(() => {
+    document.querySelector("body").classList.add("bgrBubbles");
+  });
+
   // const [currentStep, setCurrentStep] = useState();
   const currentStep = Number(router.query.step);
   const [userData, setUserData] = useState("");
-  const [finalData, setFinalData] = useState([]);
+  const [finalData, setFinalData] = useState([]); 
 
   const steps = [
     "Börn og Forsjáraðilar",
@@ -76,7 +80,7 @@ const ApplicationPage = (props) => {
       <div className={style.Application__form}>
         
         {/* Display Steps */}
-        <div className={style.Application__data}>
+        <div className={style.Application__steps}>
           <StepperContext.Provider
             value={{
               userData,

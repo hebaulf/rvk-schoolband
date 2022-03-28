@@ -1,7 +1,16 @@
+import { useContext } from "react";
+import { StepperContext } from "../../contexts/StepperContext";
 import TextBlock from "../TextBlock/TextBlock";
 import style from "./Application.module.css";
 
 const OtherInfo = () => {
+  const { userData, setUserData } = useContext(StepperContext);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserData({ ...userData, [name]: value });
+  };
+
   return (
     <div>
       <TextBlock
@@ -62,10 +71,8 @@ const OtherInfo = () => {
           um það til að raða rétt niður í hljómsveitirnar.
         </div>
         <div className="FormField TextInput TextInput--multiline">
-          <label className="FormField__label" htmlFor="info1">
-            Hvaða nám og hvar?
-          </label>
-          <textarea className="FormField__input" id="info1"></textarea>
+          <label className="FormField__label" htmlFor="info1">Hvaða nám og hvar?</label>
+          <textarea className="FormField__input" id="info1" name="info1" value={userData["info1"] || ""} onChange={handleChange}></textarea>
         </div>
       </div>
 
@@ -75,7 +82,7 @@ const OtherInfo = () => {
         <p>Vinsamlegast gerið grein fyrir ástæðu umsóknar utan skólahverfis.</p>
         <div className="FormField TextInput TextInput--multiline">
           <label className="FormField__label" htmlFor="info2"></label>
-          <textarea className="FormField__input" id="info2"></textarea>
+          <textarea className="FormField__input" id="info2" name="info2" value={userData["info2"] || ""} onChange={handleChange}></textarea>
         </div>
       </div>
     </div>

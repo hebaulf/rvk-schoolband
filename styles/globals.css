@@ -4,12 +4,17 @@ p.smalltext {
 }
 
 .bgrBubbles {
-  background-image: url(../public/yellowArt.svg);
+  background-image: url("/yellowArt.svg");
   background-repeat: no-repeat;
   background-size: 291.55px 526.2px;
   background-position-y: 151px;
   background-position-x: calc(100% + 47px);
 }
-.rightAligned {
+
+.RightAligned {
   margin-right: 0px;
+}
+
+hr {
+  border-color: var(--color-suld-75);
 }

@@ -1,15 +1,24 @@
+import { useContext } from "react";
+import { StepperContext } from "../../contexts/StepperContext";
 import SchoolBandBox from "../SchoolBandBox/SchoolBandBox";
 import TextBlock from "../TextBlock/TextBlock";
 import style from "./Application.module.css";
 import { schoolsBands } from "../../data/schools";
 
 const SchoolbandInfo = () => {
+  const { userData, setUserData } = useContext(StepperContext);
+  
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserData({ ...userData, [name]: value });
+  };
+
   const registeredSchool = "Hagaskóli";
   const defaultSchoolBand = schoolsBands[0];
   const defaultSchoolBandName = defaultSchoolBand.name;
 
   return (
-    <div className={style.SchoolBandInfo}>
+    <div className={`FormField checkboxGroup ${style.SchoolBandInfo}`} role="group">
       <TextBlock
         headingsize="h2"
         title="Val á skólahljómsveit"
@@ -37,7 +46,8 @@ const SchoolbandInfo = () => {
               ))}
             </ul>
           }
-          checkboxtext={"Velja þennan skóla"}
+          checkboxid={defaultSchoolBand.id}
+          checkboxtext="Velja þennan skóla"
         />
       </div>
 
@@ -58,14 +68,24 @@ const SchoolbandInfo = () => {
             accordiontitle={"Sjá alla skóla sem tilheyra skólahljómsveitinni"}
             accordioncontent={
               <ul className={style.SchoolbandList}>
-                {schoolband.schoolBandList.map((school, index) => (
+                {schoolband.schoolBandList.map((school) => (
                   <li key={school} className={style.SchoolbandListItem}>
                     {school}
                   </li>
                 ))}
               </ul>
             }
-            checkboxtext={"Velja þennan skóla"}
+            checkboxid={schoolband.id}
+            checkboxtext="Velja þennan skóla"
+            checked={(e) => {
+              this.handleChange({
+                target: {
+                  name: e.target.name,
+                  value: e.target.value,
+                },
+              });
+            }}
+            handleChange={handleChange}
           />
         </div>
       ))}

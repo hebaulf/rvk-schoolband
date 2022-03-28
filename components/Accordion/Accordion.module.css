@@ -1,0 +1,44 @@
+.accordion__list {
+    padding-left: 30px;
+}
+
+.accordion__item {
+    margin-bottom: 24px;
+}
+
+.accordion__title {
+    position: relative;
+    cursor: pointer;
+    font-size: 1rem !important;
+    line-height: 48px;
+}
+
+.accordion__title:before,
+.accordion__title:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: var(--color-faxafloi-100);
+}
+
+.accordion__title:before {
+    height: 4px;
+    width: 18px;
+    left: -30px;
+    top: 21px;
+}
+
+.accordion__title:after {
+    height: 18px;
+    width: 4px;
+    left: -23px;
+    top: 14px;
+}
+
+.accordion__title {
+    
+}
+
+.accordion__content {
+    
+}

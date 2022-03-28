@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { StepperContext } from "../../contexts/StepperContext";
 import TextBlock from "../TextBlock/TextBlock";
 import Dropdown from "../FormElements/Dropdown";
 import { instruments } from "../../data/instruments";
