@@ -20,7 +20,7 @@ const SchoolbandInfo = () => {
         <p className={style.smalltext}>
           Þinn Grunnskóli: <strong>{registeredSchool}</strong>
         </p>
-        <h4>Þín hverfishljómsveit:</h4>
+        <h3>Þín hverfishljómsveit:</h3>
         <SchoolBandBox
           title={defaultSchoolBandName}
           homeschool={defaultSchoolBand.homeSchool}
