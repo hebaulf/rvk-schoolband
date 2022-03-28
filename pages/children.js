@@ -2,6 +2,7 @@ import Head from "next/head";
 import HeroBlock from "../components/HeroBlock/HeroBlock";
 import style from "../styles/Children.module.css";
 import { applicationLinks } from "../data/applicationLinks";
+import Link from "next/link";
 
 export const getStaticProps = async () => {
     return {
@@ -28,7 +29,9 @@ const Children = ({ applicationLinkList }) => {
       <div className={`TextBlock ${style.textblocklist}`}>
         <h3>Umsóknir</h3>
         {applicationLinkList.map(applicationLink => (
-          <a className="ButtonTertiary" href={applicationLink.url}>{applicationLink.text}</a>
+          <Link href={applicationLink.url}>
+            <a className="ButtonTertiary" href={applicationLink.url}>{applicationLink.text}</a>
+          </Link>
         ))}
       </div>
     </div>

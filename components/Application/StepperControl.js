@@ -16,9 +16,8 @@ const StepperControl = ({ currentStep, steps }) => {
         <button
           type="button"
           className="ButtonSecondary RightAligned"
-          disabled={currentStep === 1 ? true : false}
         >
-          {currentStep === steps.length ? "Staðfesta" : "Áfram"}
+          {currentStep === currentStep.length ? "Staðfesta" : "Áfram"}
         </button>
       </Link>
     </>

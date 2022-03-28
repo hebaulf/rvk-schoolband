@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import style from "../styles/Children.module.css";
 import Stepper from "../components/Application/Stepper";
 import HeroBlock from "../components/HeroBlock/HeroBlock";
@@ -33,7 +34,7 @@ const Schoolband = () => {
             img="/sax.png"
             btntext="Byrjum Þetta!"
             btnclass="ButtonPrimary"
-            btnurl="/application"
+            btnurl="/application/1"
           />
 
           <p>

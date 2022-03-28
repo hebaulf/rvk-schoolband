@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { rvkServices } from "../data/rvkService";
 import HeroBlock from "../components/HeroBlock/HeroBlock";
@@ -110,13 +111,13 @@ export default function Home({ rvkServiceList }) {
             Þjónusta í boði hjá Reykjavíkurborg
           </h2>
           <ul className="ExtraLinks__list">
-            {rvkServiceList.map((rvkService) => (
+            {rvkServiceList.map(rvkService => (
               <li key={rvkService.id} className="ExtraLinks__item">
-                <a className="ExtraLinks__card" href={rvkService.url}>
-                  <span className="ExtraLinks__card__title">
-                    {rvkService.text}
-                  </span>
-                </a>
+                <Link href={rvkService.url}>
+                  <a className="ExtraLinks__card" href={rvkService.url}>
+                    <span className="ExtraLinks__card__title">{rvkService.text}</span>
+                  </a>
+                </Link>
               </li>
             ))}
           </ul>

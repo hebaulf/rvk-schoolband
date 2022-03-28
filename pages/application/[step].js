@@ -12,6 +12,8 @@ import Confirm from "../../components/Application/Confirm";
 
 import style from "../../styles/Home.module.css";
 
+
+
 const ApplicationPage = (props) => {
   const router = useRouter();
 
