@@ -5,6 +5,16 @@
 /*!@deps
 */
 /*! Reykjavík Design System basic CSS styles */
+body {
+  background-image: url(../public/yellowArt.svg);
+  background-repeat: no-repeat;
+  background-size: 291.55px 526.2px;
+  background-position-y: 151px;
+  background-position-x: calc(100% + 47px);
+}
+.RightAligned {
+  margin-right: 0px;
+}
 @media screen {
   :root {
     --bp-w-phone: 320;

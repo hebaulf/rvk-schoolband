@@ -10,7 +10,8 @@ const schoolband = () => {
       <div class="WizardStepper">
         <button
           type="button"
-          class="WizardStepper__step WizardStepper__step--done">
+          class="WizardStepper__step WizardStepper__step--done"
+        >
           Fyrir hvern er viðtalið?
         </button>
         <span class="WizardStepper__step WizardStepper__step--done">
@@ -35,7 +36,11 @@ const schoolband = () => {
           námsgjöld.
         </div>
         <div className="HeroBlock__buttons">
-        <p><a class="ButtonPrimary" href="/application">Byrjum Þetta!</a></p>
+          <p>
+            <a class="ButtonPrimary" href="/application">
+              Byrjum Þetta!
+            </a>
+          </p>
         </div>
       </div>
     </div>
