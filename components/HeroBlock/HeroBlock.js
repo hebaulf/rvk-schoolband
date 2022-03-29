@@ -1,10 +1,19 @@
 import Link from "next/link";
 
-const HeroBlock = ({ title, text, img, btntext, btnclass, btnurl }) => {
+const HeroBlock = ({
+  title,
+  text,
+  heroBlockClassName,
+  img,
+  imgClassName,
+  btntext,
+  btnclass,
+  btnurl,
+}) => {
   return (
-    <div className="HeroBlock">
+    <div className={heroBlockClassName}>
       <h1 className="HeroBlock__title">{title}</h1>
-      <picture className="HeroBlock__image">
+      <picture className={imgClassName}>
         <img src={img} alt={title} loading="lazy" />
       </picture>
       <div className="HeroBlock__summary">{text}</div>

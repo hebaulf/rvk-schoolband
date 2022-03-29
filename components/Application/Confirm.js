@@ -32,7 +32,9 @@ const Confirm = () => {
         headingsize="h2"
         title="Yfirlit"
         text="Þegar þú hefur farið yfir og staðfest upplýsingarnar hér að neðan klárast umsóknarferlið."
+        heroBlockClassName={style.HeroBlock}
         img="/drums.svg"
+        imgClassName={style.HeroBlock__image}
       />
       {/* Biðlisti */}
       <div className={style.title__form}>
@@ -166,12 +168,12 @@ const Confirm = () => {
           Breyta{" "}
         </a>
       </div>
-      <div className={style.infoBox}>
-        <h3 className={style.form_label}>
-          Skólahljómsveit Vestur- og Miðbæjar
-        </h3>
-        <hr />
+      <div className={style.infoBox2}>
         <fieldset>
+          <h3 className={style.form_label}>
+            Skólahljómsveit Vestur- og Miðbæjar
+          </h3>
+          <hr />
           <div className={`form__infobox`}>
             <div
               className={`FormField FormField--readonly ${style.infoBox__item}`}
@@ -196,10 +198,10 @@ const Confirm = () => {
               <span className="FormField__input" id="schoolyear" readOnly>
                 2022-23
               </span>
-              <img src="/horn.svg" alt="Umsókn"></img>
             </div>
           </div>
         </fieldset>
+        <img src="/horn.svg" alt="Umsókn" className={style.BandImage}></img>
       </div>
       {/* Skólagjöld */}
       <h3 className={`FormField__label ${style.header}`}>Skólagjöld</h3>

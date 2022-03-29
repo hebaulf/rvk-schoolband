@@ -45,7 +45,9 @@ export default function Home({ rvkServiceList }) {
         <HeroBlock
           title="Hæ, Ragnheiður"
           text="Hér finnur þú allar umsóknir borgarinnar. Sumar eru rafrænar, en aðrar á eyðublöðum. Eyðublöð má fylla út og senda með tölvupósti eða prenta út og skila á pappír."
+          heroBlockClassName="HeroBlock"
           img="https://styles.reykjavik.is/assets/illustrations/borgarstjori3.png"
+          imgClassName="HeroBlock__image"
           btnText="Um mig"
           btnClass="ButtonTertiary"
           btnUrl="/"
@@ -111,11 +113,13 @@ export default function Home({ rvkServiceList }) {
             Þjónusta í boði hjá Reykjavíkurborg
           </h2>
           <ul className="ExtraLinks__list">
-            {rvkServiceList.map(rvkService => (
+            {rvkServiceList.map((rvkService) => (
               <li key={rvkService.id} className="ExtraLinks__item">
                 <Link href={rvkService.url}>
                   <a className="ExtraLinks__card" href={rvkService.url}>
-                    <span className="ExtraLinks__card__title">{rvkService.text}</span>
+                    <span className="ExtraLinks__card__title">
+                      {rvkService.text}
+                    </span>
                   </a>
                 </Link>
               </li>

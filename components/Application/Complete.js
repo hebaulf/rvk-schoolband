@@ -6,7 +6,9 @@ const Complete = () => {
       title="Umsókn Móttekin!"
       text="Umsókn þín um skólahljómsveit er móttekin.
       Á mínum síðum getur þú séð stöðu og framvindu umsóknarinnar. Öllum umsóknum er svarað fyrir skólabyrjun haustannar."
+      heroBlockClassName="HeroBlock"
       img="/band.png"
+      imgClassName="HeroBlock__image"
       btntext="Fara á mínar síður"
       btnclass="ButtonPrimary"
       btnurl="/"
