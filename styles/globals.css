@@ -1,3 +1,7 @@
+body {
+  position: relative;
+}
+
 p.smalltext {
   font-size: 0.75rem;
   font-size: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
@@ -6,9 +10,15 @@ p.smalltext {
 .bgrBubbles {
   background-image: url("/yellowArt.svg");
   background-repeat: no-repeat;
-  background-size: 291.55px 526.2px;
-  background-position-y: 151px;
-  background-position-x: calc(100% + 47px);
+  background-image: url(/yellowArt.svg);
+  position: absolute;
+  top: 10%;
+  right: 0;
+  height: 530px;
+  width: 160px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  z-index: -1;
 }
 
 .RightAligned {

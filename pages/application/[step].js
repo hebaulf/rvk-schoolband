@@ -19,7 +19,9 @@ const ApplicationPage = (props) => {
   const router = useRouter();
 
   useEffect(() => {
-    document.querySelector("body").classList.add("bgrBubbles");
+    const elem = document.createElement('div');
+    elem.classList.add("bgrBubbles");
+    document.body.appendChild(elem);
   });
 
   // const [currentStep, setCurrentStep] = useState();
@@ -29,7 +31,7 @@ const ApplicationPage = (props) => {
 
   const steps = [
     "Börn og Forsjáraðilar",
-    "Val á skólahljómsveit",
+    "Val á skólahljómsveit", 
     "Val á hljóðfæri",
     "Upplýsingar",
     "Yfirlit og staðfesting",
