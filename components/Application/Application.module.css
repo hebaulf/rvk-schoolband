@@ -83,3 +83,21 @@
 .infoBox_checkBox_inner label {
   font-weight: 700;
 }
+
+.form_label {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.form_bandinfo {
+  font-size: 20px;
+}
+
+.form_band {
+  font-size: 20px;
+}
+
+.form_payment {
+  font-size: 20px;
+  font-weight: 700;
+}

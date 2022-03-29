@@ -11,7 +11,7 @@ const InstrumentInfo = () => {
       <TextBlock
         headingsize="h2"
         title="Val á hljóðfæri"
-        text="Í sveitunum er kennt á öll helstu málm-, tré- og slagverkshljóðfæri. Einnig eru dæmi um að kennt sé á rafbassa. Ekki er hægt að ábyrgjast að umsækjandi fái úthlutað valið hljóðfæri. Ef ekkert pláss er laust á hljóðfæri í aðalvali mun nemanda vera boðið pláss á það varahljóðfæri sem laust er á."
+        text="Í sveitunum er kennt á öll helstu málm-, tré- og slagverkshljóðfæri. Einnig eru dæmi um að kennt sé á rafbassa. Ekki er hægt að ábyrgjast að umsækjandi fái úthlutað valið hljóðfæri."
       />
 
       <div className="Attention">
@@ -28,9 +28,9 @@ const InstrumentInfo = () => {
         Því miður er ekkert laust pláss á þverflautu fyrir komandi skólaár.
       </div>
 
-      {/* Hljóðfæri í aðalval */}
+      {/* Val um hljóðfæri */}
       <div className={style.infoBox}>
-        <h3 className={style.infoBoxTitle}>Hljóðfæri í aðalval</h3>
+        <h3 className={style.infoBoxTitle}>Val um hljóðfæri</h3>
         <hr />
         <Dropdown
           selectid="adalvalshljodfaeri"
@@ -47,42 +47,10 @@ const InstrumentInfo = () => {
         />
       </div>
 
-      {/* Hljóðfæri í varaval */}
-      <div className={style.infoBox}>
-        <h3 className={style.infoBoxTitle}>Hljóðfæri í aðalval</h3>
-        <hr />
-        <Dropdown
-          selectid="varavalshljodfaeri1"
-          label="Fyrsta varaval"
-          options={instruments.map((instrument) => (
-            <optgroup key={instrument.id} label={instrument.type}>
-              {instrument.instrumentlist.map((instrumentitem, index) => (
-                <option key={index} value={instrumentitem}>
-                  {instrumentitem}
-                </option>
-              ))}
-            </optgroup>
-          ))}
-        />
-        <Dropdown
-          selectid="varavalshljodfaeri2"
-          label="Annað varaval"
-          options={instruments.map((instrument) => (
-            <optgroup key={instrument.id} label={instrument.type}>
-              {instrument.instrumentlist.map((instrumentitem, index) => (
-                <option key={index} value={instrumentitem}>
-                  {instrumentitem}
-                </option>
-              ))}
-            </optgroup>
-          ))}
-        />
-      </div>
-
       <div className="Attention">
         Við mælum með því að merkja við “Til í hvaða hljóðfæri sem er” ef óskað
-        er eftir því að fá boð á hljóðfæri utan þeirra sem valin eru. Þetta val
-        getur aukið líkur á inntöku umsækjanda ef ekki er laust pláss á valin
+        er eftir því að fá boð á hljóðfæri utan þess sem valið er. Þetta val
+        getur aukið líkur á inntöku umsækjanda ef ekki er laust pláss á valið
         hljóðfæri.
       </div>
 
