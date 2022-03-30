@@ -5,7 +5,7 @@ import Stepper from "../../components/Application/Stepper";
 import StepperControl from "../../components/Application/StepperControl";
 
 import PersonalInfo from "../../components/Application/PersonalInfo";
-import SchoolbandInfo from "../../components/Application/schoolBandInfo";
+import SchoolbandInfo from "../../components/Application/SchoolbandInfo";
 import InstrumentInfo from "../../components/Application/InstrumentInfo";
 import OtherInfo from "../../components/Application/OtherInfo";
 import Confirm from "../../components/Application/Confirm";
