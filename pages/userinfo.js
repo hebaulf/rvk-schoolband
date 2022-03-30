@@ -7,7 +7,7 @@ const children = ({ users }) => {
       <div>
         <h3>Umsóknir</h3>
         {users.map(user => (
-          <a className="ButtonTertiary" > "this is button" {user.kt}</a>
+          <a key={user.kt} className="ButtonTertiary" >User: {user.kt}</a>
         ))};
       </div>
     </div>

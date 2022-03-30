@@ -30,7 +30,7 @@ const Children = ({ applicationLinkList }) => {
       <div className={`TextBlock ${style.textblocklist}`}>
         <h3>Umsóknir</h3>
         {applicationLinkList.map((applicationLink) => (
-          <Link href={applicationLink.url}>
+          <Link key={applicationLink.id} href={applicationLink.url}>
             <a className="ButtonTertiary" href={applicationLink.url}>
               {applicationLink.text}
             </a>

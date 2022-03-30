@@ -1,7 +1,7 @@
 
 const Button = ({ btntext, btnclass }) => {
   return (
-    <button class={btnclass} type="button">{btntext}</button>
+    <button className={btnclass} type="button">{btntext}</button>
   )
 }
 

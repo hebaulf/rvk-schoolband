@@ -21,7 +21,7 @@ const SchoolBandBox = ({
       <p><strong>Heimastöð Hljómsveitar:</strong></p>
       <p>{`${homeschool}, ${address}, ${postalcode}`}</p>
       <p className={style.smalltext}>
-        <a href={linkurl} target="_blank" noopener="true" noreferrer="true">Nánar um {title}</a>
+        <a href={linkurl} target="_blank" rel="noreferrer">Nánar um {title}</a>
       </p>
       
       <AccordionList
