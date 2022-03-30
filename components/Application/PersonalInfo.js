@@ -64,7 +64,7 @@ const PersonalInfo = () => {
       {/* Kids radio buttons */}
       <h3 className="FormField__label">Börn</h3>
       <div className="FormField RadioButtonsGroup" role="group">
-        <ul className="FormField__options" role="group" aria-required="true">
+        <ul className="FormField__options" role="group">
           {kids.map(kid => (
             <li key={kid.id} className="RadioButton FormField__options__item">
               <input

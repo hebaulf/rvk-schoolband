@@ -3,7 +3,7 @@ import Link from "next/link";
 const StepperControl = ({ currentStep, steps }) => {
   return (
     <>
-      <Link href={`/application/${currentStep - 1}`}>
+      <Link href={`/application/${currentStep - 1}`} passHref>
         <button
           type="button"
           className="ButtonTertiary ButtonTertiary--go--back"

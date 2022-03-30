@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const HeroBlock = ({
   title,
@@ -14,7 +15,7 @@ const HeroBlock = ({
     <div className={heroBlockClassName}>
       <h1 className="HeroBlock__title">{title}</h1>
       <picture className={imgClassName}>
-        <img src={img} alt={title} loading="lazy" />
+        <Image src={img} alt={title} loading="lazy" />
       </picture>
       <div className="HeroBlock__summary">{text}</div>
       {btntext ? (

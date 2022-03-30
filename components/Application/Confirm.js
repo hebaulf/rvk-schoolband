@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useContext } from "react";
 import { StepperContext } from "../../contexts/StepperContext";
 import TextBlock from "../TextBlock/TextBlock";
@@ -201,7 +202,7 @@ const Confirm = () => {
             </div>
           </div>
         </fieldset>
-        <img src="/horn.svg" alt="Umsókn" className={style.BandImage}></img>
+        <Image src="/horn.svg" alt="Umsókn" className={style.BandImage}></Image>
       </div>
       {/* Skólagjöld */}
       <h3 className={`FormField__label ${style.header}`}>Skólagjöld</h3>

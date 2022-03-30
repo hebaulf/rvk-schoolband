@@ -6,14 +6,16 @@ const Header = () => {
   return (
     <div className="Layout__header" role="banner">
       <Link href="/">
-        <a className="Layout__header__logo" href="/">
+        <a className="Layout__header__logo">
           <picture>
-            <img src="https://styles.reykjavik.is/assets/reykjavik-logo.svg" alt="Reykjavík lógó. Fara á forsíðu" loading="lazy" />
+            <Image src="https://styles.reykjavik.is/assets/reykjavik-logo.svg" alt="Reykjavík lógó. Fara á forsíðu" loading="lazy" />
           </picture>
           Reykjavík
         </a>
       </Link>
-      <a className="Layout__header__skiplink" href="#pagenav" aria-label="Valmynd">Valmynd</a>
+      <Link href="#pagenav">
+        <a className="Layout__header__skiplink" aria-label="Valmynd">Valmynd</a>
+      </Link>
     </div>
   );
 };

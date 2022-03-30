@@ -69,7 +69,7 @@ const Stepper = ({ steps, currentStep }) => {
 
     const stepsDisplay = newStep.map((step, index) => {
         return (
-          <Link key={index} href={`/application/${index + 1}`}>
+          <Link key={index} href={`/application/${index + 1}`} passHref>
             <button 
                 type="button" 
                 className={`WizardStepper__step ${step.completed ? "WizardStepper__step--done" : ""} ${style.stepper}`} 
