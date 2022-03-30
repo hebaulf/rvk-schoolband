@@ -13,21 +13,19 @@ import Complete from "../../components/Application/Complete";
 
 import style from "../../styles/Home.module.css";
 
-
-
 const ApplicationPage = (props) => {
   const router = useRouter();
+
+  const [userData, setUserData] = useState("");
+  const [finalData, setFinalData] = useState([]);
 
   useEffect(() => {
     const elem = document.createElement('div');
     elem.classList.add("bgrBubbles");
     document.body.appendChild(elem);
-  });
-
-  // const [currentStep, setCurrentStep] = useState();
+  }, []);
+  
   const currentStep = Number(router.query.step);
-  const [userData, setUserData] = useState("");
-  const [finalData, setFinalData] = useState([]); 
 
   const steps = [
     "Börn og Forsjáraðilar",
@@ -55,16 +53,7 @@ const ApplicationPage = (props) => {
     }
   };
 
-  console.log("props:", router.query);
-
-  const handleClick = (direction) => {
-    let newStep = currentStep;
-
-    direction === "next" ? newStep++ : newStep--;
-
-    // Check if steps are within bounds
-    newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
-  };
+  //console.log("props:", router.query);
 
   return (
     <div className={style.Application__wrapper}>

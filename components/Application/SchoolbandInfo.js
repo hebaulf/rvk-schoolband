@@ -4,6 +4,7 @@ import SchoolBandBox from "../SchoolBandBox/SchoolBandBox";
 import TextBlock from "../TextBlock/TextBlock";
 import style from "./Application.module.css";
 import { schoolsBands } from "../../data/schools";
+import AccordionList from "../Accordion/AccordionList";
 
 const SchoolbandInfo = () => {
   const { userData, setUserData } = useContext(StepperContext);
@@ -48,47 +49,45 @@ const SchoolbandInfo = () => {
           }
           checkboxid={defaultSchoolBand.id}
           checkboxtext="Velja þennan skóla"
+          checked={userData}
+          handleChange={handleChange}
         />
       </div>
 
       <TextBlock
         headingsize="h3"
-        title="Velja hljómsveit utan hverfis:"
+        title="Hljómsveitir utan hverfis"
         text="Mælt er með því að velja hljómsveit innan hverfis umsækjanda en ýmsar ástæður geta verið fyrir því að sótt er um utan hverfis."
       />
 
-      {schoolsBands.map((schoolband) => (
-        <div key={schoolband.id}>
-          <SchoolBandBox
-            title={schoolband.name}
-            homeschool={schoolband.homeSchool}
-            address={schoolband.streetAddress}
-            postalcode={schoolband.postalCode}
-            linkurl={schoolband.infoLink}
-            accordiontitle={"Sjá alla skóla sem tilheyra skólahljómsveitinni"}
-            accordioncontent={
-              <ul className={style.SchoolbandList}>
-                {schoolband.schoolBandList.map((school) => (
-                  <li key={school} className={style.SchoolbandListItem}>
-                    {school}
-                  </li>
-                ))}
-              </ul>
-            }
-            checkboxid={schoolband.id}
-            checkboxtext="Velja þennan skóla"
-            checked={(e) => {
-              this.handleChange({
-                target: {
-                  name: e.target.name,
-                  value: e.target.value,
-                },
-              });
-            }}
-            handleChange={handleChange}
-          />
-        </div>
-      ))}
+      <AccordionList
+        title="Velja hljómsveit utan hverfis:" 
+        content={ schoolsBands.map((schoolband) => (
+          <div key={schoolband.id}>
+            <SchoolBandBox
+              title={schoolband.name}
+              homeschool={schoolband.homeSchool}
+              address={schoolband.streetAddress}
+              postalcode={schoolband.postalCode}
+              linkurl={schoolband.infoLink}
+              accordiontitle={"Sjá alla skóla sem tilheyra skólahljómsveitinni"}
+              accordioncontent={
+                <ul className={style.SchoolbandList}>
+                  {schoolband.schoolBandList.map((school) => (
+                    <li key={school} className={style.SchoolbandListItem}>
+                      {school}
+                    </li>
+                  ))}
+                </ul>
+              }
+              checkboxid={schoolband.id}
+              checkboxtext="Velja þennan skóla"
+              checked={userData}
+              handleChange={handleChange}
+            />
+          </div>
+        ))}
+      />
     </div>
   );
 };

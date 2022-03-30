@@ -6,6 +6,15 @@ import { instruments } from "../../data/instruments";
 import style from "./Application.module.css";
 
 const InstrumentInfo = () => {
+  const { userData, setUserData } = useContext(StepperContext);
+
+  const handleChange = (e) => {
+    const { name, value, checked} = e.target;
+    const data = checked ? name : value;
+    setUserData({ ...userData, [name]: data });
+    // console.log(e)
+  };
+
   return (
     <div>
       <TextBlock
@@ -35,10 +44,13 @@ const InstrumentInfo = () => {
         <Dropdown
           selectid="adalvalshljodfaeri"
           label="Vinsamlegast veljið hljóðfæri"
+          onchange={handleChange}
+          name="maininstrument"
+          value={userData["maininstrument"] || ""}
           options={instruments.map((instrument) => (
             <optgroup key={instrument.id} label={instrument.type}>
               {instrument.instrumentlist.map((instrumentitem, index) => (
-                <option key={index} value={instrumentitem}>
+                <option key={index}>
                   {instrumentitem}
                 </option>
               ))}
@@ -57,8 +69,15 @@ const InstrumentInfo = () => {
       {/* Til í hvaða hljóðfæri sem er */}
       <div className={style.infoBox_checkBox}>
         <div className={style.infoBox_checkBox_inner}>
-          <input className="Checkbox__input" type="checkbox" id="_9027003-5" />
-          <label className="Checkbox__label" htmlFor="_9027003-5">
+          <input 
+            className="Checkbox__input" 
+            type="checkbox" 
+            id="anyinstrument"
+            name="anyinstrument"
+            checked={userData["anyinstrument"] || false}
+            onChange={handleChange}
+          />
+          <label className="Checkbox__label" htmlFor="anyinstrument">
             Til í hvaða hljóðfæri sem er!
           </label>
         </div>

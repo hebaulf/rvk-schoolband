@@ -1,3 +1,7 @@
 import { createContext } from "react";
 
-export const StepperContext = createContext(null);
+const initialState = {
+    text: "",
+}
+
+export const StepperContext = createContext(initialState);

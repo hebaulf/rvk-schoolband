@@ -7,8 +7,9 @@ const OtherInfo = () => {
   const { userData, setUserData } = useContext(StepperContext);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUserData({ ...userData, [name]: value });
+    const { name, value, checked} = e.target;
+    const data = checked ? name : value;
+    setUserData({ ...userData, [name]: data });
   };
 
   return (
@@ -24,7 +25,14 @@ const OtherInfo = () => {
         <h3 className={style.infoBoxTitle}>Biðlisti</h3>
         <a href="#">Hvernig hefur þetta áhrif?</a>
         <div className={style.infoBox_checkBox_inner}>
-          <input className="Checkbox__input" type="checkbox" id="waitinglist" />
+          <input 
+            className="Checkbox__input" 
+            type="checkbox" 
+            id="waitinglist"
+            name="waitinglist"
+            checked={userData["waitinglist"] || false}
+            onChange={handleChange} 
+          />
           <label className="Checkbox__label" htmlFor="waitinglist">
             Umsækjandi var á biðlista fyrir skólahljómsveit síðastliðið ár
           </label>
@@ -36,7 +44,14 @@ const OtherInfo = () => {
         <h3 className={style.infoBoxTitle}>Þáttaka í starfinu</h3>
         <a href="#">Hvað þýðir það?</a>
         <div className={style.infoBox_checkBox_inner}>
-          <input className="Checkbox__input" type="checkbox" id="cooperation" />
+          <input 
+            className="Checkbox__input" 
+            type="checkbox" 
+            id="cooperation"
+            name="cooperation"
+            checked={userData["cooperation"] || false}
+            onChange={handleChange} 
+          />
           <label className="Checkbox__label" htmlFor="cooperation">
             Umsækjandi samþykkir að taka þátt í starfi skólahljómsveitarinnar
           </label>
@@ -52,6 +67,9 @@ const OtherInfo = () => {
             className="Checkbox__input"
             type="checkbox"
             id="teachingonschooltime"
+            name="teachingonschooltime"
+            checked={userData["teachingonschooltime"] || false}
+            onChange={handleChange}
           />
           <label className="Checkbox__label" htmlFor="teachingonschooltime">
             Forsjáraðili samþykkir að umsækjandi stundi æfingar á skólatíma.

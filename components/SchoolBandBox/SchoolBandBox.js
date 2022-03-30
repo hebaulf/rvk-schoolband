@@ -7,12 +7,12 @@ const SchoolBandBox = ({
   address,
   postalcode,
   linkurl,
-  accordionitems,
   accordiontitle,
   accordioncontent,
   checkboxid,
 	checkboxtext,
   handleChange,
+  value,
   checked
 }) => {
   return (
@@ -25,7 +25,6 @@ const SchoolBandBox = ({
       </p>
       
       <AccordionList
-        accordionitems={accordionitems} 
         title={accordiontitle} 
         content={accordioncontent} 
       />
@@ -36,6 +35,7 @@ const SchoolBandBox = ({
           type="checkbox" 
           name="check" 
           id={checkboxid} 
+          value={value}
           onChange={handleChange}
           checked={checked}
         />

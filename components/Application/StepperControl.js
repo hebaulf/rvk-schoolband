@@ -13,9 +13,17 @@ const StepperControl = ({ currentStep, steps }) => {
         </button>
       </Link>
       <Link href={`/application/${currentStep + 1}`}>
-        <button type="button" className="ButtonSecondary rightAligned">
-          {currentStep === currentStep.length ? "Staðfesta" : "Áfram"}
-        </button>
+        {(currentStep === steps.length - 1) 
+          ? (
+            <button type="button" className="ButtonPrimary rightAligned">
+              Samþykkja og senda inn umsókn!
+            </button>
+          ) : (
+            <button type="button" className="ButtonSecondary rightAligned">
+              Áfram
+            </button>
+          )
+        }
       </Link>
     </>
   );

@@ -42,9 +42,13 @@ const PersonalInfo = () => {
   const { userData, setUserData } = useContext(StepperContext);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUserData({ ...userData, [name]: value });
+    const { name, value, checked} = e.target;
+    const data = checked ? name : value;
+    setUserData({ ...userData, [name]: data });
+    console.log(e)
   };
+
+  console.log("userData: ", userData)
 
   return (
     <div className={style.personalInfoApplication}>
@@ -67,7 +71,9 @@ const PersonalInfo = () => {
                 className="RadioButton__input"
                 type="radio"
                 id={kid.id}
-                value={kid.name}
+                name={kid.name}
+                checked={userData[kid.name] || false}
+                onChange={handleChange}
                 disabled={kid.birthYear > 2014 ? true : false}
               />
               <label className="RadioButton__label" htmlFor={kid.id}>
