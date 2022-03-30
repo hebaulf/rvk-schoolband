@@ -15,7 +15,7 @@ const HeroBlock = ({
     <div className={heroBlockClassName}>
       <h1 className="HeroBlock__title">{title}</h1>
       <picture className={imgClassName}>
-        <Image src={img} alt={title} loading="lazy" />
+        <Image layout="fill" objectFit="contain" src={img} alt={title} loading="lazy" />
       </picture>
       <div className="HeroBlock__summary">{text}</div>
       {btntext ? (

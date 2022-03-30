@@ -202,7 +202,7 @@ const Confirm = () => {
             </div>
           </div>
         </fieldset>
-        <Image src="/horn.svg" alt="Umsókn" className={style.BandImage}></Image>
+        <Image src="/horn.svg" height="396" width="306" alt="Umsókn" className={style.BandImage}></Image>
       </div>
       {/* Skólagjöld */}
       <h3 className={`FormField__label ${style.header}`}>Skólagjöld</h3>

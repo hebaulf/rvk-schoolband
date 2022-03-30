@@ -5,5 +5,8 @@ const nextConfig = {
     // ssr and displayName are configured by default
     styledComponents: true,
   },
+  images: {
+    domains: ["styles.reykjavik.is"],
+  },
 }
 module.exports = nextConfig

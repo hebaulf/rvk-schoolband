@@ -8,7 +8,7 @@ const Header = () => {
       <Link href="/">
         <a className="Layout__header__logo">
           <picture>
-            <Image src="https://styles.reykjavik.is/assets/reykjavik-logo.svg" alt="Reykjavík lógó. Fara á forsíðu" loading="lazy" />
+            <Image src="https://styles.reykjavik.is/assets/reykjavik-logo.svg" height="53" width="182" alt="Reykjavík lógó. Fara á forsíðu" loading="lazy" />
           </picture>
           Reykjavík
         </a>
