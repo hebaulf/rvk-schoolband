@@ -26,7 +26,7 @@ const SchoolbandInfo = () => {
         text="Skólahljómsveitir þjóna ákveðnum grunnskólum í Reykjavík. Í mörgum þeirra er kennsla á vegum skólahljómsveita á skólatíma. Hver hljómsveit er starfrækt í öllum skólum viðeigandi hverfis en á svo eina heimastöð."
       />
 
-      <div class="VSpacer">
+      <div className="VSpacer">
         <div className={style.defaultSchoolBand}>
           <p>Þinn Grunnskóli: <strong>{registeredSchool}</strong></p>
           <h3>Þín hverfishljómsveit:</h3>

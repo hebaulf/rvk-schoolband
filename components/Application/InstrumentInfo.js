@@ -29,7 +29,7 @@ const InstrumentInfo = () => {
       </div>
 
       {/* Warning */}
-      <div class="VSpacer">
+      <div className="VSpacer">
         <div
           className="Alert Alert--warning Alert--closable"
           role="alert"
