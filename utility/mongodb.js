@@ -1,15 +1,25 @@
 import { MongoClient } from 'mongodb'
  //This works now we break it down to server side Props
 
-const uri = "mongodb+srv://skolahljomsveit:nxmNbN0V0DAWJHWB@cluster0.bgcqq.mongodb.net/schoolbase?retryWrites=true&w=majority" 
+const uri = process.env.MONGODB_URI
+const options = {} 
 
-export default async (req, res) => {
-  const client = new MongoClient(uri)
-  const db = client.db()
-  await client.connect();
+let client
+let clientPromise
 
-const collection =  await db.collection('user').find({}).toArray();
+if (!process.env.MONGODB_URI) {
+  throw new Error('Please add your Mongo URI to .env.local')
+}
 
-return res.json(collection);
+if (process.env.NODE_ENV === 'development') {
+  if (!global._mongoClientPromise) {
+    client = new MongoClient(uri, options)
+    global._mongoClientPromise = client.connect()
+  }
+  clientPromise = global._mongoClientPromise
+  } else {
+    client = new MongoClient(uri, options)
+    clientPromise = client.connect()
+}
 
-};
+export default clientPromise

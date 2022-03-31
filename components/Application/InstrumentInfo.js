@@ -20,7 +20,7 @@ const InstrumentInfo = () => {
       <TextBlock
         headingsize="h2"
         title="Val á hljóðfæri"
-        text="Í sveitunum er kennt á öll helstu málm-, tré- og slagverkshljóðfæri. Einnig eru dæmi um að kennt sé á rafbassa. Ekki er hægt að ábyrgjast að umsækjandi fái úthlutað valið hljóðfæri."
+        text="Í sveitunum er kennt á öll helstu málm-, tré- og slagverkshljóðfæri. Einnig eru dæmi um að kennt sé á rafbassa. Við mælum með því að merkja við “Til í hvaða hljóðfæri sem er” ef óskað er eftir því að fá boð á hljóðfæri utan þess sem valið er. Þetta val getur aukið líkur á inntöku umsækjanda ef ekki er laust pláss á valið hljóðfæri."
       />
 
       <div className="Attention">
@@ -29,41 +29,14 @@ const InstrumentInfo = () => {
       </div>
 
       {/* Warning */}
-      <div
-        className="Alert Alert--warning Alert--closable"
-        role="alert"
-        hidden=""
-      >
-        Því miður er ekkert laust pláss á þverflautu fyrir komandi skólaár.
-      </div>
-
-      {/* Val um hljóðfæri */}
-      <div className={style.infoBox}>
-        <h3 className={style.infoBoxTitle}>Val um hljóðfæri</h3>
-        <hr />
-        <Dropdown
-          selectid="adalvalshljodfaeri"
-          label="Vinsamlegast veljið hljóðfæri"
-          onchange={handleChange}
-          name="maininstrument"
-          value={userData["maininstrument"] || ""}
-          options={instruments.map((instrument) => (
-            <optgroup key={instrument.id} label={instrument.type}>
-              {instrument.instrumentlist.map((instrumentitem, index) => (
-                <option key={index}>
-                  {instrumentitem}
-                </option>
-              ))}
-            </optgroup>
-          ))}
-        />
-      </div>
-
-      <div className="Attention">
-        Við mælum með því að merkja við “Til í hvaða hljóðfæri sem er” ef óskað
-        er eftir því að fá boð á hljóðfæri utan þess sem valið er. Þetta val
-        getur aukið líkur á inntöku umsækjanda ef ekki er laust pláss á valið
-        hljóðfæri.
+      <div class="VSpacer">
+        <div
+          className="Alert Alert--warning Alert--closable"
+          role="alert"
+          hidden=""
+        >
+          Því miður er ekkert laust pláss á þverflautu fyrir komandi skólaár.
+        </div>
       </div>
 
       {/* Til í hvaða hljóðfæri sem er */}
@@ -81,6 +54,28 @@ const InstrumentInfo = () => {
             Til í hvaða hljóðfæri sem er!
           </label>
         </div>
+      </div>
+
+      {/* Val um hljóðfæri */}
+      <div className={style.infoBox}>
+        <h3 className={style.infoBoxTitle}>Velja hljóðfæri</h3>
+        <hr />
+        <Dropdown
+          selectid="adalvalshljodfaeri"
+          label="Vinsamlegast veljið hljóðfæri af lista"
+          onchange={handleChange}
+          name="maininstrument"
+          value={userData["maininstrument"] || ""}
+          options={instruments.map((instrument) => (
+            <optgroup key={instrument.id} label={instrument.type}>
+              {instrument.instrumentlist.map((instrumentitem, index) => (
+                <option key={index}>
+                  {instrumentitem}
+                </option>
+              ))}
+            </optgroup>
+          ))}
+        />
       </div>
     </div>
   );

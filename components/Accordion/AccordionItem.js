@@ -6,11 +6,9 @@ const AccordionItem = ({ title, content }) => {
 
   useState
   return (
-    <div className={`AccordionList__item ${style.accordion__item}`}>
+    <div className={`AccordionList__item ${style.accordion__item} ${isActive ? style.open : ""}`}>
       <h4 className={`AccordionList__title ${style.accordion__title}`}  onClick={() => setIsActive(!isActive)}>{title}</h4>
-      {isActive && (
-        <div className={`AccordionList__content TextBlock ${style.accordion__content}`}>{content}</div>
-      )}
+      <div className={`AccordionList__content TextBlock ${style.accordion__content}`}>{content}</div>
     </div>
   )
 }

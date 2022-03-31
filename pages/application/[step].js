@@ -13,7 +13,7 @@ import Complete from "../../components/Application/Complete";
 
 import style from "../../styles/Home.module.css";
 
-const ApplicationPage = (props) => {
+const ApplicationPage = () => {
   const router = useRouter();
 
   const [userData, setUserData] = useState("");

@@ -10,7 +10,6 @@ const Header = () => {
           <picture>
             <Image src="https://styles.reykjavik.is/assets/reykjavik-logo.svg" height="53" width="182" alt="Reykjavík lógó. Fara á forsíðu" loading="lazy" />
           </picture>
-          Reykjavík
         </a>
       </Link>
       <Link href="#pagenav">

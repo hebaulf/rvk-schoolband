@@ -23,15 +23,15 @@ const parents = [
   },
 ];
 
-const kids = [
+const children = [
   {
-    id: "kid01",
+    id: "child01",
     name: "Rögnvaldur Björn Magnússon",
     ssn: "030412-5476",
     birthYear: 2012,
   },
   {
-    id: "kid02",
+    id: "child02",
     name: "Magnús Björnsson",
     ssn: "130816-5476",
     birthYear: 2016,
@@ -61,24 +61,24 @@ const PersonalInfo = () => {
         </p>
       </div>
 
-      {/* Kids radio buttons */}
+      {/* Pick child */}
       <h3 className="FormField__label">Börn</h3>
       <div className="FormField RadioButtonsGroup" role="group">
         <ul className="FormField__options" role="group">
-          {kids.map(kid => (
-            <li key={kid.id} className="RadioButton FormField__options__item">
+          {children.map(child => (
+            <li key={child.id} className="RadioButton FormField__options__item">
               <input
                 className="RadioButton__input"
                 type="radio"
-                id={kid.id}
-                name={kid.name}
-                checked={userData[kid.name] || false}
+                id={child.id}
+                name={child.name}
+                checked={userData[child.name] || false}
                 onChange={handleChange}
-                disabled={kid.birthYear > 2014 ? true : false}
+                disabled={child.birthYear > 2014 ? true : false}
               />
-              <label className="RadioButton__label" htmlFor={kid.id}>
-                {kid.name} 
-                <small>{kid.ssn}</small>
+              <label className="RadioButton__label" htmlFor={child.id}>
+                {child.name} 
+                <small>{child.ssn}</small>
               </label>
             </li>
           ))}

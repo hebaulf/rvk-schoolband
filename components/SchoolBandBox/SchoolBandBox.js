@@ -13,13 +13,14 @@ const SchoolBandBox = ({
 	checkboxtext,
   handleChange,
   value,
-  checked
+  checked,
+  name
 }) => {
   return (
     <div className={style.infoBox}>
-      <h4>{title}</h4>
-      <p><strong>Heimastöð Hljómsveitar:</strong></p>
-      <p>{`${homeschool}, ${address}, ${postalcode}`}</p>
+      <h4 className={style.infoBoxTitle}>{title}</h4>
+      <p className={style.infoBoxStrong}><strong>Heimastöð Hljómsveitar:</strong></p>
+      <p className={style.infoBoxSchool}>{`${homeschool}, ${address}, ${postalcode}`}</p>
       <p className={style.smalltext}>
         <a href={linkurl} target="_blank" rel="noreferrer">Nánar um {title}</a>
       </p>
@@ -33,7 +34,7 @@ const SchoolBandBox = ({
         <input 
           className="Checkbox__input" 
           type="checkbox" 
-          name="check" 
+          name={name} 
           id={checkboxid} 
           value={value}
           onChange={handleChange}

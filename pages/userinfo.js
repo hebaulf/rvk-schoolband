@@ -1,34 +1,37 @@
-import { MongoClient } from 'mongodb'
+import clientPromise from "../utility/mongodb";
 
-const children = ({ users }) => {
-
+const userInfo = ({ users }) => {
+  console.log(users)
   return (
     <div className="container">
       <div>
-        <h3>Umsóknir</h3>
-        {users.map(user => (
-          <a key={user.kt} className="ButtonTertiary" >User: {user.kt}</a>
-        ))};
+        <h3>Users from DB</h3>
+        <div>
+          {users.map((user, index) => (
+            <div key={index}>
+              <div>User Name: {user.name}</div>
+              <div>User Kt.: {user.kt}</div>
+              
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
 
-export async function getServerSideProps(context)  {
-  const uri = "mongodb+srv://skolahljomsveit:nxmNbN0V0DAWJHWB@cluster0.bgcqq.mongodb.net/schoolbase?retryWrites=true&w=majority" 
-  const client = new MongoClient(uri)
-  const db = client.db()
-  await client.connect();
+export async function getServerSideProps(context) {
+  const client = await clientPromise;
 
-  let users =  await db.collection('user').find({}).toArray();
+  const db = client.db("schoolbase");
+
+  let users = await db.collection("user").find({}).toArray();
   users = JSON.parse(JSON.stringify(users));
-
-  // console.log(users)
 
   return {
     props: { users },
   };
-} 
+}
 
-export default children;
+export default userInfo;

@@ -12,7 +12,7 @@ const Stepper = ({ steps, currentStep }) => {
     let count = 0;
     while (count < newSteps.length) {
         
-      //current step
+      // Current step
       if (count === stepNumber) {
         newSteps[count] = {
           ...newSteps[count],
@@ -23,7 +23,7 @@ const Stepper = ({ steps, currentStep }) => {
         count++;
       }
 
-      //step completed
+      // Step completed
       else if (count < stepNumber) {
         newSteps[count] = {
           ...newSteps[count],
@@ -33,7 +33,7 @@ const Stepper = ({ steps, currentStep }) => {
         };
         count++;
       }
-      //step pending
+      // Step pending
       else {
         newSteps[count] = {
           ...newSteps[count],
@@ -51,15 +51,15 @@ const Stepper = ({ steps, currentStep }) => {
     useEffect(() => {
       // Create object
       const stepsState = steps.map((step, index) =>
-          Object.assign(
-              {},
-              {
-                  description: step,
-                  completed: false,
-                  highlighted: index === 0 ? true : false,
-                  selected: index === 0 ? true : false,
-              }
-          )
+        Object.assign(
+          {},
+          {
+            description: step,
+            completed: false,
+            highlighted: index === 0 ? true : false,
+            selected: index === 0 ? true : false,
+          }
+        )
       );
 
       stepsRef.current = stepsState;
@@ -68,23 +68,22 @@ const Stepper = ({ steps, currentStep }) => {
     }, [steps, currentStep]);
 
     const stepsDisplay = newStep.map((step, index) => {
-        return (
-          <Link key={index} href={`/application/${index + 1}`} passHref>
-            <button 
-                type="button" 
-                className={`WizardStepper__step ${step.completed ? "WizardStepper__step--done" : ""} ${style.stepper}`} 
-                aria-current={step.highlighted ? "step" : ""} >
-                {step.description}
-            </button>
-          </Link>
-        );
+      return (
+        <Link key={index} href={`/application/${index + 1}`} passHref>
+          <button 
+              type="button" 
+              className={`WizardStepper__step ${step.completed ? "WizardStepper__step--done" : ""} ${style.stepper}`} 
+              aria-current={step.highlighted ? "step" : ""} >
+              {step.description}
+          </button>
+        </Link>
+      );
     });
         
   return (
     <div className="WizardStepper">
         {stepsDisplay}
     </div>
-    
   )
 }
 

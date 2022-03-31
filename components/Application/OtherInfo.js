@@ -20,25 +20,6 @@ const OtherInfo = () => {
         text="Hér koma frekari upplýsingar sem eru gagnlegar fyrir úrvinnslu umsókna."
       />
 
-      {/* Biðlisti */}
-      <div className={style.infoBox}>
-        <h3 className={style.infoBoxTitle}>Biðlisti</h3>
-        <a href="#">Hvernig hefur þetta áhrif?</a>
-        <div className={style.infoBox_checkBox_inner}>
-          <input 
-            className="Checkbox__input" 
-            type="checkbox" 
-            id="waitinglist"
-            name="waitinglist"
-            checked={userData["waitinglist"] || false}
-            onChange={handleChange} 
-          />
-          <label className="Checkbox__label" htmlFor="waitinglist">
-            Umsækjandi var á biðlista fyrir skólahljómsveit síðastliðið ár
-          </label>
-        </div>
-      </div>
-
       {/* Þáttaka í starfinu */}
       <div className={style.infoBox}>
         <h3 className={style.infoBoxTitle}>Þáttaka í starfinu</h3>
