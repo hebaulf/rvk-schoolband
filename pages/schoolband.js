@@ -27,9 +27,9 @@ const Schoolband = () => {
           <HeroBlock
             title="Hæ, Ragnheiður, þá hefst umsóknarferlið!"
             text="Vandað tónlistarnám og tónlistaruppeldi fer fram í skólahljómsveitunum fjórum sem starfræktar eru á vegum Reykjavíkurborgar. Sótt er um nám í skólahljómsveit rafrænt. Nota má frístundakortið til að greiða niður námsgjöld."
-            heroBlockClassName="HeroBlock"
+            heroblockclassname="HeroBlock"
             img="/sax.png"
-            imgClassName="HeroBlock__image"
+            imgclassname="HeroBlock__image"
             btntext="Byrjum Þetta!"
             btnclass="ButtonPrimary"
             btnurl="/application/1"

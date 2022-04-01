@@ -11,7 +11,6 @@ const userInfo = ({ users }) => {
             <div key={index}>
               <div>User Name: {user.name}</div>
               <div>User Kt.: {user.kt}</div>
-              
             </div>
           ))}
         </div>

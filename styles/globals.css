@@ -1,5 +1,11 @@
+html {
+  overflow: visible;
+}
+
 body {
   position: relative;
+  overflow-x: auto;
+  overflow-y: scroll;
 }
 
 p.smalltext {

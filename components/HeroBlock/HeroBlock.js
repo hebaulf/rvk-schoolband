@@ -4,27 +4,37 @@ import Image from "next/image";
 const HeroBlock = ({
   title,
   text,
-  heroBlockClassName,
+  heroblockclassname,
   img,
-  imgClassName,
+  imgclassname,
   btntext,
   btnclass,
   btnurl,
+  onclick
 }) => {
   return (
-    <div className={heroBlockClassName}>
+    <div className={heroblockclassname}>
       <h1 className="HeroBlock__title">{title}</h1>
-      <picture className={imgClassName}>
-        <Image layout="fill" objectFit="contain" src={img} alt={title} loading="lazy" />
-      </picture>
+      {img && 
+        <picture className={imgclassname}>
+          <Image layout="fill" objectFit="contain" src={img} alt={title} loading="lazy" />
+        </picture>
+      }
       <div className="HeroBlock__summary">{text}</div>
       {btntext ? (
         <div className="HeroBlock__buttons">
-          <Link href={btnurl}>
-            <a className={btnclass} href={btnurl}>
+          {btnurl &&
+            <Link href={btnurl}>
+              <a className={btnclass}>
+                {btntext}
+              </a>
+            </Link>
+          }
+          {onclick &&
+            <button className={btnclass} onClick={onclick}>
               {btntext}
-            </a>
-          </Link>
+            </button>
+          }
         </div>
       ) : (
         ""

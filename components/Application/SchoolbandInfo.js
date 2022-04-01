@@ -10,8 +10,9 @@ const SchoolbandInfo = () => {
   const { userData, setUserData } = useContext(StepperContext);
   
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUserData({ ...userData, [name]: value });
+    const { name, value, checked} = e.target;
+    const data = checked ? name : value;
+    setUserData({ ...userData, [name]: data });
   };
 
   const registeredSchool = "Hagaskóli";

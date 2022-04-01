@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useContext } from "react";
 import { StepperContext } from "../../contexts/StepperContext";
-import TextBlock from "../TextBlock/TextBlock";
 import style from "./Application.module.css";
 import HeroBlock from "../HeroBlock/HeroBlock";
 
@@ -27,16 +26,23 @@ const parents = [
 ];
 
 const Confirm = () => {
-  return (
+
+  const { userData, setUserData } = useContext(StepperContext);
+
+  const handleChange = (e) => {
+    const { name, value, checked} = e.target;
+    const data = checked ? name : value;
+    setUserData({ ...userData, [name]: data });
+  };
+    return (
     <div>
       <HeroBlock
         headingsize="h2"
         title="Yfirlit"
         text="Þegar þú hefur farið yfir og staðfest upplýsingarnar hér að neðan klárast umsóknarferlið."
-        heroBlockClassName={style.HeroBlock}
-        img="/drums.svg"
-        imgClassName={style.HeroBlock__image}
+        heroblockclassname={style.HeroBlock}
       />
+
       {/* Biðlisti */}
       <div className={style.title__form}>
         <h3 className={`FormField__label ${style.header}`}>Barn</h3>
@@ -183,7 +189,7 @@ const Confirm = () => {
                 Val á hljóðfæri
               </label>
               <span className="FormField__input" id="instrument1" readOnly>
-                Óbó
+                Trompet
               </span>
             </div>
             <hr />
@@ -222,9 +228,12 @@ const Confirm = () => {
             <input
               className="Checkbox__input"
               type="checkbox"
-              id="cooperation"
+              id="fristundastyrkur"
+              name="fristundastyrkur"
+              checked={userData["fristundastyrkur"] || false}
+              onChange={handleChange}
             />
-            <label className="Checkbox__label" htmlFor="cooperation">
+            <label className="Checkbox__label" htmlFor="fristundastyrkur">
               Já, ég vil nýta frístundastyrkinn hér
             </label>
           </div>

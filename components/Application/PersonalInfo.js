@@ -1,42 +1,7 @@
 import { useContext, useState } from "react";
 import { StepperContext } from "../../contexts/StepperContext";
 import style from "./Application.module.css";
-
-const parents = [
-  {
-    id: "parent01",
-    name: "Ragnheiður Margrét Jónsdóttir",
-    ssn: "030484-4556",
-    address: "Leynimel 48",
-    postalCode: "107",
-    phone: "6984050",
-    email: "ragnheidur@snjoark.is",
-  },
-  {
-    id: "parent02",
-    name: "Magnús Björnsson",
-    ssn: "010184-6789",
-    address: "Leynimel 48",
-    postalCode: "107",
-    phone: "6978792",
-    email: "magbjo46@hi.is",
-  },
-];
-
-const children = [
-  {
-    id: "child01",
-    name: "Rögnvaldur Björn Magnússon",
-    ssn: "030412-5476",
-    birthYear: 2012,
-  },
-  {
-    id: "child02",
-    name: "Magnús Björnsson",
-    ssn: "130816-5476",
-    birthYear: 2016,
-  },
-];
+import { parents, children } from "../../data/users";
 
 const PersonalInfo = () => {
   const { userData, setUserData } = useContext(StepperContext);
@@ -45,10 +10,8 @@ const PersonalInfo = () => {
     const { name, value, checked} = e.target;
     const data = checked ? name : value;
     setUserData({ ...userData, [name]: data });
-    console.log(e)
+    // console.log(e)
   };
-
-  console.log("userData: ", userData)
 
   return (
     <div className={style.personalInfoApplication}>
