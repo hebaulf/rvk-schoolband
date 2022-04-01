@@ -21,7 +21,7 @@ const Navigation = () => {
           {session 
             ? (
               <li className="MainMenu__item">
-                <a className="MainMenu__link" href="#" onClick={() => {router.push("/")}}>Útskráning</a>
+                <a className="MainMenu__link" href="#" onClick={() => signOut()}>Útskráning</a>
               </li>
             ) 
             : (
